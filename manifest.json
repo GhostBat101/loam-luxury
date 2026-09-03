@@ -2,13 +2,14 @@
   "project_name": "Loam Luxury",
   "type": "creative site",
   "created_at": "2026-09-02T16:08:29.499734+00:00",
-  "last_update": "2026-09-03T17:07:59.915094+00:00",
-  "update_count": 4,
+  "last_update": "2026-09-03T19:08:02.038539+00:00",
+  "update_count": 5,
   "categories_covered": [
     "color system",
     "micro-interactions",
     "component architecture",
-    "visual identity & brand"
+    "visual identity & brand",
+    "photography & art direction"
   ],
   "status": "active"
 }

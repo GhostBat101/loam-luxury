@@ -1,0 +1,12 @@
+Notes for Loam Luxury (creative site)
+Focus this round: photography & art direction
+
+Building on: micro-interactions, component architecture, visual identity & brand
+
+Inspiration reviewed this round:
+- https://brutalistwebsites.com/: Brutalist Websites
+- https://collectui.com/: (skipped: disallowed by robots.txt)
+- https://land-book.com: (skipped: disallowed by robots.txt)
+
+Thoughts on photography & art direction:
+- (auto-generated placeholder -- enable ANTHROPIC_API_KEY for richer notes)
