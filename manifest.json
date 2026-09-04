@@ -2,8 +2,8 @@
   "project_name": "Loam Luxury",
   "type": "creative site",
   "created_at": "2026-09-02T16:08:29.499734+00:00",
-  "last_update": "2026-09-04T15:08:02.005403+00:00",
-  "update_count": 9,
+  "last_update": "2026-09-04T17:07:43.220856+00:00",
+  "update_count": 10,
   "categories_covered": [
     "color system",
     "micro-interactions",
@@ -13,7 +13,8 @@
     "footer",
     "interaction design",
     "mobile UX",
-    "hero section"
+    "hero section",
+    "content strategy"
   ],
   "status": "active"
 }
