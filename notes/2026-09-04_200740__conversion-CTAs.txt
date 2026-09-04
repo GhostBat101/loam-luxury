@@ -1,0 +1,12 @@
+Notes for Loam Luxury (creative site)
+Focus this round: conversion & CTAs
+
+Building on: mobile UX, hero section, content strategy
+
+Inspiration reviewed this round:
+- https://land-book.com: (skipped: disallowed by robots.txt)
+- https://www.awwwards.com/websites/portfolio/: (skipped: disallowed by robots.txt)
+- https://www.siteinspire.com: (fetch failed: HTTP Error 429: Too Many Requests)
+
+Thoughts on conversion & CTAs:
+- (auto-generated placeholder -- enable ANTHROPIC_API_KEY for richer notes)
