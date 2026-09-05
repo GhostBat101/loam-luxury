@@ -1,0 +1,10 @@
+May 20, 2024 — Motion & Animation Architecture for Loam Luxury
+
+Drawing from the physics-driven, canvas-seamless interactions benchmarked in top-tier Framer Gallery builds, Loam Luxury’s motion profile must balance organic weight ("loam") with high-craft mechanical precision ("luxury"). Generic 200ms ease-out fades will cheapen the brand; motion must feel tactile, deliberate, and physically grounded.
+
+Key Motion Implementation Vectors:
+
+- Damped Fluid Scroll Physics: Implement scroll-linked parallax using high-mass, heavy-damping spring parameters (stiffness: 110, damping: 26). Showcase cards shouldn't just slide up; they should move with a slight inertial delay that mimics dense, rich material settling into place on a page.
+- "Topsoil" Surface Layering: For site breakdown articles, use a WebGL clip-path mask driven by cursor position and velocity. Hovering over a luxury website screenshot smoothly "scrapes back" the visual layer to reveal the underlying typographic grid, color tokens, and layout wireframe beneath.
+- Organic Variable-Font Morphing: Micro-interactions on metadata and category tags will interpolate variable font axes (`font-weight` shifting from 300 to 580, `opsz` opening from 8 to 14) on cursor proximity rather than relying on basic color flips. Transition easing curve: `cubic-bezier(0.16, 1, 0.3, 1)` over 400ms to mimic natural growth.
+- Shared-Element Viewport Expansion: Inspired by Framer’s in-situ container transitions, clicking an archive item uses shared layout morphing to expand the thumbnail fluidly into the full detail view's header frame, keeping the user anchored in space without page-flash redirects or harsh modal overlays.
