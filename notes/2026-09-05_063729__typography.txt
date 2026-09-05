@@ -1,0 +1,12 @@
+Date: October 24, 2024
+Focus: Typography Strategy — Loam Luxury
+
+* Tension Between High Editorial and Raw Architecture: Borrowing from Brutalist Websites' focus on unadorned web mechanics, *Loam Luxury* will establish a high-contrast pairing: an ultra-refined, high-contrast display serif juxtaposed with stark, raw monospaced utility text. The serif handles meta-commentary on digital craft, while the monospace handles site metrics and structural breakdown.
+
+* Display Face (The "Luxury" Layer): GT Sectra or Canela Display. High optical contrast with razor-sharp, chiseled ink traps that evoke physical stone and carved earth. Used at dramatic viewport-based sizes (`12vw+`) with negative letter-spacing (`-0.04em`) for hero statements. Title case for critique essays; all-caps letterspaced (+0.15em) for category badges.
+
+* Metadata & Technical UI (The "Loam/Brutalist" Layer): SF Mono or GT America Mono. Instead of styling UI elements like traditional luxury sites, technical metadata for featured creative sites (e.g., `[STACK: THREE.JS / GLSL]`, `[DOM_DEPTH: 142]`, `[PERF_SCORE: 98/100]`) will be rendered in unstyled, uppercase monospace at 11px. This grounds the site in raw web reality, stripping away slick design-agency pretense.
+
+* Body Typography & Texture: Source Serif 4 or Reckless, set at a generous 20px with 1.65 line-height on warm, unbleached limestone (`#E8E5DF`) backgrounds. Paragraph indents replacing double line-breaks to mimic print luxury monographs. Drop caps set in the primary display serif, spanning precisely 3 lines, rendered in deep peat (`#2B2823`).
+
+* Dynamic Variable Axis for Interaction: Utilize a variable serif (e.g., Roslindale Variable) where hover states on critical site analysis points smoothly shift the optical size (`opsz`) and weight (`wght`) parameters from 300 Light to 700 Bold, giving the text a subtle physical "compression" effect akin to shifting soil under foot.
