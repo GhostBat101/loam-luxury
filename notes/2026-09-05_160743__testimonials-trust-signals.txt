@@ -1,0 +1,11 @@
+March 30, 2026
+
+LOAM LUXURY — RESEARCH & PLANNING: TESTIMONIALS & TRUST SIGNALS
+
+*   **Editorial Marginalia over Quotation Cards:** Traditional SaaS testimonial carousels undermine a luxury aesthetic. Taking cues from Framer Gallery's attribution cards, we will turn trust signals into contextual margin annotations. As users scroll a featured website breakdown, pull-quotes from prominent design directors appear in the outer gutters as styled editorial markups (e.g., debossed foil text or precise serif footnotes), critiquing or validating the exact interaction visible on screen.
+
+*   **Technical Provenance Seals as Trust Metrics:** For a site about creative Web craftsmanship, authority comes from technical rigor, not corporate logo clouds. We will develop a bespoke "Loam Provenance Stamp" module for every featured site. This badge displays verifiable engineering telemetry—framerate stability (e.g., 60fps WebGL load), shader execution weight, and typography rendering fidelity—paired with a cryptographic-style digital signature from the lead creative engineer.
+
+*   **Tactile Audio Memos ("The Voice Notes"):** Replace static text quotes with minimalist, 10-second raw voice snippets from featured agency founders discussing their breakthrough moment on the project. Interface-wise, present these as micro-waveform strips embedded into project headers—offering an intimate, high-fidelity human signal that fits the earthy, tactile luxury identity of Loam.
+
+*   **Living Code Inspection Drawer:** Extending Framer’s live site attribution model into a deeper meta-review tool, clicking a curator’s endorsement drawer won't just display designer metadata—it will pull up a live, syntax-highlighted snippet of the custom WebGL shader or layout logic being praised, establishing ultimate proof of mastery for both the creator and Loam's curatorial depth.
