@@ -1,0 +1,8 @@
+2026-03-30 | Research Note: Layout & Grid Architecture
+
+Borrowing the raw, structural honesty of Brutalist Websites, Loam Luxury’s grid will abandon soft container cards in favor of exposed, unpolished structural frameworks—reinterpreted through a high-end editorial lens.
+
+* **Exposed Hairline Wireframes:** Implement a persistent 12-column grid visible across all viewport sizes using 1px muted-sand border lines. Grid intersections will feature subtle, monospace coordinate markers (e.g., `COL_03 // ROW_01`) acting as both functional design telemetry and luxury branding details.
+* **Asymmetric Density Contrasts:** Juxtapose brutalist high-density data blocks with expansive, empty earth-toned voids. Feature showcases will use an aggressive 4/8 column split: Columns 1–4 carry a dense, vertically packed stack of monospace site specifications (grid system type, typography scale, render times), while Columns 5–12 host a single widescreen viewport frame.
+* **Tectonic Layering & Offset Snap:** Instead of centered, cushioned containers, layout blocks will mimic earth strata. Lower content blocks will overlap section boundaries by precise 64px vertical grid increments, forcing typography and image viewports to collide directly with boundary lines rather than floating cleanly inside padded boxes.
+* **Vertical Rhythm Breaking:** Interrupt smooth scrolling with full-bleed, single-row "breakout grids" (e.g., a 1x16 horizontal strip of micro-thumbnails or raw CSS grid parameters) that force the viewer’s eye to adjust speed, mirroring brutalism's abrupt structural transitions while maintaining high-fashion typography.
