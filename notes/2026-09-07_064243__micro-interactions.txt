@@ -1,0 +1,8 @@
+2024-10-24 | Micro-Interaction Specs: Loam Luxury
+
+Taking Brutalist Websites' raw, unrendered feedback loops as a counterweight to standard "smooth" luxury motion. Where traditional luxury web design over-indexes on slow, 800ms ease-out transitions, Loam Luxury will juxtapose instant, zero-latency brutalist state changes with heavy, tactile physics.
+
+*   **The "Compacted Earth" Drag Physics:** Card sliders and gallery items won't use spring physics. Instead, dragging content applies a high-friction visual drag with an instant SVG displacement map grain distortion that collapses back to clean vector typography the millisecond input stops.
+*   **Stark Inversion Hover States:** Text links skip gradual color fades. On cursor hover, trigger an immediate 0ms color inversion across a tightly bounded rectangular box (raw brutalist marquee effect), paired with a subtle, dynamic monospace coordinate badge (`[X:102, Y:440]`) pinned to the cursor edge.
+*   **Tactile Text Selection:** Highlighting editorial copy triggers an immediate browser-native style background fill (#2C2A29 earth-black), but appends an inline CSS `mix-blend-mode: difference` filter to the selection box, making high-fashion typography feel forcefully stamped onto the canvas.
+*   **X-Ray Layout Toggle (Meta-Design Cue):** A persistent micro-button in the footer instantly strips all rich styling and imagery on mousedown, revealing the raw grid lines and DOM node names in bright monochrome green—releasing the mouse restores the luxury state instantly.

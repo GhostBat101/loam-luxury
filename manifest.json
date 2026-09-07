@@ -2,28 +2,10 @@
   "project_name": "Loam Luxury",
   "type": "creative site",
   "created_at": "2026-09-02T16:08:29.499734+00:00",
-  "last_update": "2026-09-06T17:08:01.088584+00:00",
-  "update_count": 19,
+  "last_update": "2026-09-07T06:42:43.519122+00:00",
+  "update_count": 20,
   "categories_covered": [
-    "color system",
-    "micro-interactions",
-    "component architecture",
-    "visual identity & brand",
-    "photography & art direction",
-    "footer",
-    "interaction design",
-    "mobile UX",
-    "hero section",
-    "content strategy",
-    "conversion & CTAs",
-    "typography",
-    "navigation",
-    "motion & animation",
-    "testimonials & trust signals",
-    "pricing presentation",
-    "layout & grid",
-    "forms",
-    "accessibility"
+    "micro-interactions"
   ],
   "status": "active"
 }
