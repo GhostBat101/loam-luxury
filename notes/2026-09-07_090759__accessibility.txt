@@ -1,0 +1,12 @@
+Notes for Loam Luxury (creative site)
+Focus this round: accessibility
+
+Building on: micro-interactions
+
+Inspiration reviewed this round:
+- https://www.framer.com/community/gallery/: Framer Gallery: Explore the best websites built with Framer
+- https://www.behance.net: (skipped: disallowed by robots.txt)
+- https://www.siteinspire.com: (fetch failed: HTTP Error 429: Too Many Requests)
+
+Thoughts on accessibility:
+- (auto-generated placeholder -- enable ANTHROPIC_API_KEY for richer notes)
