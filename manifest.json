@@ -2,8 +2,8 @@
   "project_name": "Loam Luxury",
   "type": "creative site",
   "created_at": "2026-09-02T16:08:29.499734+00:00",
-  "last_update": "2026-09-08T09:07:51.051041+00:00",
-  "update_count": 26,
+  "last_update": "2026-09-08T12:07:40.867889+00:00",
+  "update_count": 27,
   "categories_covered": [
     "micro-interactions",
     "accessibility",
@@ -11,7 +11,8 @@
     "motion & animation",
     "conversion & CTAs",
     "content strategy",
-    "hero section"
+    "hero section",
+    "interaction design"
   ],
   "status": "active"
 }
