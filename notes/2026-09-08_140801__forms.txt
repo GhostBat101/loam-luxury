@@ -1,0 +1,12 @@
+Notes for Loam Luxury (creative site)
+Focus this round: forms
+
+Building on: content strategy, hero section, interaction design
+
+Inspiration reviewed this round:
+- https://land-book.com: (skipped: disallowed by robots.txt)
+- https://www.awwwards.com/websites/portfolio/: (skipped: disallowed by robots.txt)
+- https://brutalistwebsites.com/: Brutalist Websites
+
+Thoughts on forms:
+- (auto-generated placeholder -- enable ANTHROPIC_API_KEY for richer notes)
