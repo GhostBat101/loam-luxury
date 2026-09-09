@@ -1,0 +1,14 @@
+2024-10-24 | Research Note: Typography Strategy for Loam Luxury
+
+Inspiration Synthesis:
+Bridging the raw, deliberate friction of Brutalist Websites with the hyper-polished fluid execution found across Framer Gallery showcases. For a site *about* creative sites, typography cannot just be a passive vessel for critique; it must act as the primary architectural grid and diagnostic tool.
+
+Concrete Implementation Ideas:
+
+• The Ink-Trap & Engine Contrast: Pair an ultra-refined, high-contrast display serif featuring deep, organic ink-traps (e.g., Signifier or GT Sectra) with a dense, industrial monospace (e.g., ABC Favorit Mono or Pitch). The display font handles the "Luxury" editorial titles, while the monospace handles raw site metadata (framework, frame rates, font stack specs). The organic ink traps visually anchor the "Loam" metaphor against the sterile tech data.
+
+• Dynamic "Excavation" Variable Axes: Leverage a variable display font with custom `Optical Size` and `Weight` axes mapped to vertical scroll position in deep-dive critique articles. As the user scrolls down to dissect a site, header text physically dense-up and compresses, mimicking the visual weight of digging deeper into sub-layers of site architecture.
+
+• Live Meta-Annotation Layer: Draw on brutalist inline transparency by embedding small-scale, high-density inline micro-type (7pt mono, upper-case, accented in terra-cotta or electric amber) directly within main critique paragraphs. Hovering over a design term breaks the paragraph line-height to reveal real-time font rendering metrics (rendered PX size, leading ratio, variable font weight values) of the site being reviewed.
+
+• Viewport-Edge Clipping & Difference Modes: Set index section headers at extreme fluid sizes (`20vw` to `26vw`) using `clamp()`, breaking normal padding containers to bleed off screen edges. Overlay preview thumbnails directly over these massive text elements using `mix-blend-mode: difference`—turning display type into dynamic negative-space framing for featured screenshots.
