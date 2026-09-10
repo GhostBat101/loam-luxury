@@ -9,10 +9,16 @@ html, body {
   padding: 0;
   background-color: var(--page-bg, #f3f6f9);
   color: var(--color-ink, #071D31);
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: var(--transition-surface);
+}
+
+*, *::before, *::after {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .ambient-scroll-canvas {
