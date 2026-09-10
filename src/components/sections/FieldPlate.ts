@@ -7,7 +7,7 @@
 export function renderFieldPlate(): string {
   return `
     <section aria-label="Field Plate Visual" class="relative w-full aspect-[21/9] min-h-[60vh] max-h-[82vh] overflow-hidden hairline-border-b bg-[#071D31] group">
-      <img alt="THALASSA Extrait de Parfum flacon resting in Aegean tidal sea water on pure white coastal rocks" class="w-full h-full object-cover transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:scale-[1.03]" src="/images/field-plate.jpg" />
+      <img alt="THALASSA Extrait de Parfum flacon resting in Aegean tidal sea water on pure white coastal rocks" class="w-full h-full object-cover transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:scale-[1.03]" src="/images/field-plate.png" />
       <div class="absolute inset-0 bg-gradient-to-t from-[#071D31]/90 via-[#071D31]/30 to-transparent pointer-events-none"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-[#071D31]/60 via-transparent to-[#071D31]/40 pointer-events-none"></div>
       <div aria-hidden="true" class="absolute inset-0 flex items-center justify-center pointer-events-none">
