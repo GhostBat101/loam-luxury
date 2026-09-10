@@ -1,7 +1,0 @@
-October 24, 2023 — Interaction Design Planning Note: Loam Luxury
-
-* Viscous Precision Cursor & Proximity Typography: Rather than relying on standard snappy cursor followers seen in generic portfolio showcases, implement a proximity-based variable font controller. As the pointer moves within a 120px radius of primary project titles, the custom variable display face smoothly shifts its weight (`wght` 300->600) and optical size (`opsz`), making the typography expand softly towards the cursor like organic growth before locking into crisp, razor-sharp alignment on direct hover.
-
-* Sediment Layering & Depth Transitions: Moving past standard page-wipe transitions, section changes will use a depth-buffer WebGL displacement map. Scrolling down doesn't just push content up; it visually "erodes" the high-resolution hero imagery at the edges, peeling back the editorial topsoil to reveal raw technical breakdowns and case study details beneath. The scroll resistance should feel slightly weighted (viscous inertial damping) to match the rich, heavy branding of "Loam."
-
-* Tactile Asset Scrubbing: Case study image galleries bypass standard carousel arrows. Users click-and-drag across full-bleed spreads, utilizing a spring-physics drag mechanic. Dragging leaves a fleeting, high-grain visual distortion trailing the asset, giving the impression of dragging a physical print proof across a textured worktable, settling with zero overshoot when released.
