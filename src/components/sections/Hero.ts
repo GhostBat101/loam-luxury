@@ -1,6 +1,6 @@
 /**
  * Hero Panoramic Waterline Monolith Section.
- * Renders broadside typography, double-exposure drift, floating light glints, and water caustics.
+ * Renders broadside typography, floating light glints, and fluid cursor-responsive water caustics.
  * Communicates with: src/main.ts and index.html.
  */
 
@@ -34,10 +34,7 @@ export function renderHero(): string {
           <div aria-hidden="true" class="hero-glint-1 absolute -top-4 left-1/4 w-2 h-2 rounded-full bg-cyan-300 shadow-[0_0_12px_#38bdf8] pointer-events-none"></div>
           <div aria-hidden="true" class="hero-glint-2 absolute top-1/2 left-3/5 w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_#ffffff] pointer-events-none"></div>
           <div aria-hidden="true" class="hero-glint-3 absolute -bottom-2 right-1/3 w-2.5 h-2.5 rounded-full bg-sky-200 shadow-[0_0_14px_#38bdf8] pointer-events-none"></div>
-          <div aria-hidden="true" class="water-drift absolute -top-6 sm:-top-10 left-0 font-display italic font-semibold text-[16vw] lg:text-[15vw] leading-none tracking-tight stroke-hero uppercase pointer-events-none">
-            THALASSA
-          </div>
-          <h1 class="reveal-item relative font-display text-[16vw] lg:text-[15vw] leading-none tracking-tight hero-water-shimmer uppercase font-semibold drop-shadow-2xl" id="hero-title" style="transition-delay: 300ms;">
+          <h1 class="reveal-item relative font-display text-[16vw] lg:text-[15vw] leading-none tracking-tight hero-water-shimmer uppercase font-semibold select-none cursor-pointer" data-fluid-shimmer="true" id="hero-title" style="transition-delay: 300ms;">
             THALASSA
           </h1>
           <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-white tracking-[0.25em] uppercase font-medium mt-4 flex items-center gap-3" style="transition-delay: 450ms;">
