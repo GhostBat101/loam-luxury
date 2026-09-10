@@ -1,0 +1,25 @@
+/**
+ * Design Tokens & Oceanic Palette Definition.
+ * Exposes Thalassa Aqua Substrate CSS variables for dynamic surface rendering.
+ * Communicates with: src/styles/main.css, src/modules/animation/scroll-background.ts, and tailwind.config.ts.
+ */
+
+:root {
+  --page-bg: #f3f6f9;
+  --color-surface: #f0f4f8;
+  --color-surface-sub: #e5eef7;
+  --color-surface-dim: #cfe2fe;
+  --color-surface-light: #fafcff;
+  --color-ink: #071d31;
+  --color-ink-muted: #1c3b5e;
+  --color-marine-deep: #053c6b;
+  --color-marine-mid: #285384;
+  --color-electric-cyan: #0ea5e9;
+  --color-sky-highlight: #38bdf8;
+  --color-ice-border: rgba(40, 83, 132, 0.16);
+  --color-hairline: rgba(40, 83, 132, 0.16);
+  --color-primary: #053c6b;
+  --color-primary-container: #285384;
+  --radius-sharp: 0px;
+  --transition-surface: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
