@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build and Production outputs
+dist/
+build/
+out/
+.next/
+.astro/
+.output/
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Temporary and Cache
+.cache/
+.parcel-cache/
+.turbo/
+
+# Project Documentation, Research Notes & Seed Output (Excluded from GitHub)
+docs/
+notes/
+stitch_output/
+manifest.json
