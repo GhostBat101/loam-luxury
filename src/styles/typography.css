@@ -1,0 +1,96 @@
+/**
+ * Typography Hierarchy & Editorial Couture Styling.
+ * Defines Bodoni Moda, Manrope, IBM Plex Mono, and Syne typographic systems.
+ * Communicates with: src/styles/tokens.css, src/styles/main.css, and index.html.
+ */
+
+.font-display {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.font-sans {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-brutalist {
+  font-family: "Syne", sans-serif;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.stroke-hero {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+  color: transparent;
+}
+
+.hero-water-shimmer {
+  background: linear-gradient(
+    110deg,
+    #FFFFFF 0%,
+    #F3F6F9 20%,
+    #38BDF8 42%,
+    #FFFFFF 50%,
+    #0EA5E9 60%,
+    #CFE2FE 80%,
+    #FFFFFF 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waterShimmer 10s ease-in-out infinite, heroWaveDistort 8s ease-in-out infinite;
+  will-change: transform, background-position;
+  transform: translateZ(0);
+}
+
+.header-caustic-shimmer {
+  background: linear-gradient(
+    90deg,
+    #053C6B 0%,
+    #071D31 30%,
+    #053C6B 48%,
+    #0EA5E9 52%,
+    #071D31 70%,
+    #053C6B 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textOceanCaustic 8s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.metallic-liquid-shimmer {
+  background: linear-gradient(
+    105deg,
+    #071D31 0%,
+    #053C6B 35%,
+    #0284C7 48%,
+    #38BDF8 53%,
+    #053C6B 65%,
+    #071D31 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: liquidMetallicGlow 7s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.plate-wave-title {
+  animation: plateWaveFloat 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.tidal-drift-text {
+  display: inline-block;
+  animation: tidalWaveDrift 6s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
