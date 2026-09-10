@@ -1,8 +1,0 @@
-October 24, 2023
-Focus: Navigation Architecture for Loam Luxury
-
-Taking cues from Brutalist Websites' raw structural transparency, Loam Luxury's navigation will reject hidden hamburger menus and generic floating bars in favor of an omnipresent "Architectural Frame." The luxury note is struck through hyper-precise typography and fluid micro-interactions, while the brutalist influence exposes the site’s underlying grid and file system.
-
-* **Perimeter Edge Index:** Anchor monospaced coordinates directly along the viewport borders (`01 // ARCHIVE`, `02 // ANATOMY`, `03 // INDEX`). Instead of hiding on scroll, the nav acts as a static matte frame around the scrolling editorial content. Hovering over a section anchor highlights the viewport border in deep terracotta; clicking triggers a precise jump cut paired with an optional low-frequency haptic audio click.
-* **The Directory Matrix Overlay:** Triggered via a persistent corner key (`[INDEX]`) or pressing `[M]`. This opens a stark, unstyled two-column spatial grid that treats navigation like an administrative manifest. The left column lists all creative site breakdowns by category and release date; the right column acts as a real-time viewport previewing hover-state wireframes of the target page before the user commits to the click.
-* **Scrubbable Context Strings:** In place of a static top bar, embed a interactive breadcrumb string along the top edge (`LOAM > ANALYSIS > META_DESIGN > NAV_SYSTEMS`). Users can click-and-drag horizontally across any section of the path string to scrub fluidly through parent and child directories without waiting for dynamic page loads.
