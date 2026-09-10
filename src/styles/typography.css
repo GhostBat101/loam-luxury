@@ -1,24 +1,39 @@
 /**
  * Typography Hierarchy & Editorial Couture Styling.
- * Defines Bodoni Moda, Manrope, IBM Plex Mono, and Syne typographic systems.
+ * Defines Bodoni Moda, Manrope, IBM Plex Mono, and Syne typographic systems with fluid shimmer effects.
  * Communicates with: src/styles/tokens.css, src/styles/main.css, and index.html.
  */
 
 .font-display {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
+  font-variation-settings: "opsz" 96;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-mono {
   font-family: "IBM Plex Mono", monospace;
+  font-feature-settings: "calt" 1, "zero" 1;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-sans {
   font-family: "Manrope", sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-brutalist {
   font-family: "Syne", sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .vertical-rl {
@@ -26,61 +41,78 @@
 }
 
 .stroke-hero {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
   color: transparent;
+  text-rendering: geometricPrecision;
 }
 
 .hero-water-shimmer {
-  background: linear-gradient(
+  background-image: linear-gradient(
     110deg,
     #FFFFFF 0%,
-    #F3F6F9 20%,
-    #38BDF8 42%,
-    #FFFFFF 50%,
-    #0EA5E9 60%,
-    #CFE2FE 80%,
+    #F3F6F9 18%,
+    #38BDF8 38%,
+    #FFFFFF 48%,
+    #0EA5E9 56%,
+    #CFE2FE 74%,
     #FFFFFF 100%
   );
   background-size: 260% 100%;
+  background-position: var(--fluid-shimmer-pos, 50%) 0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: waterShimmer 10s ease-in-out infinite, heroWaveDistort 8s ease-in-out infinite;
-  will-change: transform, background-position;
-  transform: translateZ(0);
+  cursor: default;
+  transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-water-shimmer:hover {
+  filter: drop-shadow(0 8px 24px rgba(14, 165, 233, 0.35));
 }
 
 .header-caustic-shimmer {
-  background: linear-gradient(
+  background-image: linear-gradient(
     90deg,
     #053C6B 0%,
-    #071D31 30%,
-    #053C6B 48%,
-    #0EA5E9 52%,
+    #071D31 28%,
+    #053C6B 42%,
+    #0EA5E9 50%,
+    #38BDF8 54%,
     #071D31 70%,
     #053C6B 100%
   );
   background-size: 250% 100%;
+  background-position: var(--fluid-shimmer-pos, 50%) center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textOceanCaustic 8s ease-in-out infinite;
-  will-change: background-position;
+  cursor: default;
+  transition: filter 0.3s ease;
+}
+
+.header-caustic-shimmer:hover {
+  filter: drop-shadow(0 4px 12px rgba(14, 165, 233, 0.25));
 }
 
 .metallic-liquid-shimmer {
-  background: linear-gradient(
+  background-image: linear-gradient(
     105deg,
     #071D31 0%,
-    #053C6B 35%,
-    #0284C7 48%,
-    #38BDF8 53%,
-    #053C6B 65%,
+    #053C6B 30%,
+    #0284C7 44%,
+    #38BDF8 50%,
+    #0EA5E9 56%,
+    #053C6B 68%,
     #071D31 100%
   );
   background-size: 260% 100%;
+  background-position: var(--fluid-shimmer-pos, 50%) 0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: liquidMetallicGlow 7s ease-in-out infinite;
-  will-change: background-position;
+  cursor: default;
+  transition: filter 0.3s ease;
+}
+
+.metallic-liquid-shimmer:hover {
+  filter: drop-shadow(0 6px 18px rgba(14, 165, 233, 0.3));
 }
 
 .plate-wave-title {
@@ -92,5 +124,4 @@
   display: inline-block;
   animation: tidalWaveDrift 6s ease-in-out infinite;
   will-change: transform;
-  transform: translateZ(0);
 }
