@@ -1,0 +1,201 @@
+/**
+ * Brutalist Utilities & Hairline Borders.
+ * Declares architectural crosshairs, hairline borders, range slider controls, and magnetic states.
+ * Communicates with: src/styles/tokens.css, src/styles/main.css, and component templates.
+ */
+
+.hairline-border-b {
+  border-bottom: 1px solid var(--color-hairline, rgba(40, 83, 132, 0.16));
+}
+
+.hairline-border-t {
+  border-top: 1px solid var(--color-hairline, rgba(40, 83, 132, 0.16));
+}
+
+.hairline-border-l {
+  border-left: 1px solid var(--color-hairline, rgba(40, 83, 132, 0.16));
+}
+
+.hairline-border-r {
+  border-right: 1px solid var(--color-hairline, rgba(40, 83, 132, 0.16));
+}
+
+.crosshair {
+  position: relative;
+}
+
+.crosshair::before {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  background: currentColor;
+  left: -5px;
+  top: 50%;
+}
+
+.crosshair::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 11px;
+  background: currentColor;
+  left: 50%;
+  top: -5px;
+}
+
+.nav-magnetic {
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.nav-magnetic::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--color-marine-deep, #053C6B);
+  box-shadow: 0 0 8px rgba(5, 60, 107, 0.6);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-magnetic:hover::after,
+.nav-magnetic:focus-visible::after {
+  width: 100%;
+}
+
+.nav-magnetic:hover {
+  transform: translate3d(0, -1.5px, 0);
+}
+
+.footer-link-underline {
+  position: relative;
+  transition: color 0.3s ease, transform 0.25s ease;
+}
+
+.footer-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--color-marine-deep, #053C6B);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-link-underline:hover::after,
+.footer-link-underline:focus-visible::after {
+  width: 100%;
+}
+
+.spectrum-btn {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.spectrum-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(5, 60, 107, 0.08), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.spectrum-btn:hover::before {
+  opacity: 1;
+}
+
+.spectrum-btn:hover {
+  transform: translate3d(0, -2px, 0);
+  border-color: var(--color-marine-deep, #053C6B);
+  box-shadow: 0 6px 20px -6px rgba(5, 60, 107, 0.2);
+}
+
+.spectrum-btn.active-phase {
+  background-color: rgba(220, 233, 248, 0.75);
+  border-color: var(--color-marine-deep, #053C6B);
+  box-shadow: 0 0 16px rgba(5, 60, 107, 0.15);
+}
+
+.spectrum-btn.active-phase .note-title {
+  color: var(--color-marine-deep, #053C6B);
+}
+
+.spectrum-btn.active-phase .pill-tag {
+  background-color: var(--color-marine-deep, #053C6B);
+  color: var(--color-surface-light, #FAFCFF);
+  border-color: var(--color-marine-deep, #053C6B);
+}
+
+.btn-reserve-kinetic {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
+}
+
+.btn-reserve-kinetic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-reserve-kinetic:hover {
+  transform: translate3d(0, -2px, 0) scale3d(1.01, 1.01, 1);
+  box-shadow: 0 10px 32px rgba(5, 60, 107, 0.35), 0 0 20px rgba(14, 165, 233, 0.3);
+  border-color: var(--color-electric-cyan, #0EA5E9);
+}
+
+.btn-reserve-kinetic:hover::before {
+  left: 140%;
+}
+
+.btn-reserve-kinetic:active {
+  transform: scale3d(0.985, 0.985, 1);
+}
+
+.telemetry-curve-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1), d 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 0px !important;
+  background: var(--color-marine-deep, #053C6B);
+  cursor: pointer;
+  border: 2px solid var(--color-surface-light, #FAFCFF);
+  box-shadow: 0 0 10px rgba(5, 60, 107, 0.5);
+  transition: transform 0.2s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 0px !important;
+  background: var(--color-marine-deep, #053C6B);
+  cursor: pointer;
+  border: 2px solid var(--color-surface-light, #FAFCFF);
+  box-shadow: 0 0 10px rgba(5, 60, 107, 0.5);
+}
