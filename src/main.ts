@@ -9,6 +9,7 @@ import { MotionController } from './modules/accessibility/motion-controller';
 import { initSmoothScroll } from './modules/scroll/smooth-scroll';
 import { initScrollBackground } from './modules/animation/scroll-background';
 import { initScrollReveal } from './modules/animation/scroll-reveal';
+import { initFluidShimmer } from './modules/animation/fluid-shimmer';
 import { renderArchitecturalRail } from './components/layout/ArchitecturalRail';
 import { renderTelemetryRibbon } from './components/layout/TelemetryRibbon';
 import { renderHeader, setupHeader } from './components/layout/Header';
@@ -59,6 +60,7 @@ function bootstrap(): void {
   initSmoothScroll();
   initScrollBackground();
   initScrollReveal(motionController);
+  initFluidShimmer();
 }
 
 if (document.readyState === 'loading') {
