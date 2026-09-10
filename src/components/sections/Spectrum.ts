@@ -105,7 +105,7 @@ export function renderSpectrum(): string {
           <div aria-live="polite" class="lg:col-span-5 space-y-6 lg:hairline-border-l lg:pl-10 font-mono text-xs">
             <div>
               <span class="text-[#053C6B] font-extrabold tracking-widest uppercase text-[10px] scanline-pulse">// CHROMATOGRAPHY SPECIFICATION</span>
-              <h3 class="font-display text-3xl text-[#071D31] font-semibold mt-1 uppercase tracking-tight header-caustic-shimmer" id="chroma-title">${initialTier.chromatographyTitle}</h3>
+              <h3 class="font-display text-3xl text-[#071D31] font-semibold mt-1 uppercase tracking-tight header-caustic-shimmer cursor-pointer" data-fluid-shimmer="true" id="chroma-title">${initialTier.chromatographyTitle}</h3>
               <p class="text-[#1C3B5E] tracking-normal font-sans text-sm mt-2 leading-relaxed font-medium" id="chroma-description">
                 ${initialTier.chromatographyDescription}
               </p>
