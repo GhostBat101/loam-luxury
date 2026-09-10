@@ -1,9 +1,0 @@
-2024-10-24 | Research Note: Color System Strategy
-
-* Base Palette (Soil & Ochre): Shift away from generic luxury black (#000000) to an organic, heavy dark brown base—"Deep Loam" (#161412)—paired with an off-white "Raw Linen" (#F2EFE9) for light mode/editorial popouts. Accent colors draw from unrefined earth minerals: a muted Terracotta (#A8523B) and a dense Forest Clay (#2D3A2F) for structural dividing lines and subtle hover states.
-
-* The Brutalist Edge (Meta Accent): Brutalist Websites proves that high tension keeps editorial sites from feeling overly safe. Introduce a single, aggressive "Phosphor Green" (#C8FF00) or "Laser Coral" (#FF4222) accent color. Use this exclusively for technical metadata (e.g., site speed tags, frame rate indicators, CSS inspecting tools, tag pills), instantly signaling to visitors that this is a technical breakdown of web design, not just a static gallery.
-
-* Framer-Style Ambient Layers: Drawing from top Framer gallery layouts, depth should come from atmosphere rather than heavy drop shadows. Implement subtle, slow-cycling CSS mesh gradients in the background (blending Deep Loam into subtle #221B17 tones) underneath frosted glass overlays (`backdrop-filter: blur(16px)` with 60% opacity fill). This gives featured website screenshots a polished, "floating in a gallery" effect.
-
-* Contextual Content Theming: Because Loam Luxury showcases third-party creative sites, the UI background will adapt dynamically. When hovering over a featured site preview card, sample the dominant color from the site's thumbnail via Canvas API and blend a low-opacity (5–10%) tint into Loam Luxury's container background, letting the curated site subtly take over the reader's environment without breaking the global layout.
