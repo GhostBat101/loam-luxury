@@ -25,7 +25,7 @@ export function renderAcquisition(): string {
             <div class="font-mono text-xs uppercase tracking-widest text-[#053C6B] font-extrabold">
               [EDITION 001 // FIRST DRAW] · AEGEAN BASIN
             </div>
-            <h3 class="font-display text-4xl sm:text-6xl lg:text-7xl uppercase font-semibold tracking-tight metallic-liquid-shimmer">
+            <h3 class="font-display text-4xl sm:text-6xl lg:text-7xl uppercase font-semibold tracking-tight metallic-liquid-shimmer cursor-pointer" data-fluid-shimmer="true">
               THALASSA EXTRAIT DE PARFUM
             </h3>
             <p class="font-display text-3xl sm:text-5xl text-[#071D31] font-medium">
