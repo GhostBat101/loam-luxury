@@ -1,0 +1,15 @@
+/**
+ * Master Stylesheet Entrypoint.
+ * Aggregates design tokens, resets, Tailwind layers, animations, and custom utilities.
+ * Communicates with: index.html, postcss.config.js, and all rendered markup.
+ */
+
+@import './tokens.css';
+@import './base.css';
+@import './typography.css';
+@import './animations.css';
+@import './utilities.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
