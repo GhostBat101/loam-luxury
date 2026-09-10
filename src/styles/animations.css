@@ -6,43 +6,39 @@
 
 @keyframes waterShimmer {
   0% {
-    background-position: -200% 0;
+    background-position: -30% 0;
+  }
+  50% {
+    background-position: 130% 0;
   }
   100% {
-    background-position: 200% 0;
+    background-position: -30% 0;
   }
 }
 
 @keyframes heroWaveDistort {
   0%, 100% {
-    transform: translate3d(0, 0px, 0) skewX(0deg) scale3d(1, 1, 1);
-    filter: drop-shadow(0 15px 35px rgba(14, 165, 233, 0.25));
+    transform: translateY(0);
   }
-  33% {
-    transform: translate3d(0, -4px, 0) skewX(-0.4deg) scale3d(1.006, 1.006, 1);
-    filter: drop-shadow(0 20px 45px rgba(14, 165, 233, 0.4));
-  }
-  66% {
-    transform: translate3d(0, 3px, 0) skewX(0.4deg) scale3d(0.998, 0.998, 1);
-    filter: drop-shadow(0 10px 25px rgba(14, 165, 233, 0.2));
+  50% {
+    transform: translateY(-3px);
   }
 }
 
 @keyframes waterDoubleDrift {
   0%, 100% {
-    transform: translate3d(0, 0px, 0) scale3d(1, 1, 1);
-    opacity: 0.45;
+    transform: translateY(0);
+    opacity: 0.25;
   }
   50% {
-    transform: translate3d(0, -6px, 0) scale3d(1.012, 1.012, 1);
-    opacity: 0.7;
+    transform: translateY(-4px);
+    opacity: 0.45;
   }
 }
 
 .water-drift {
   animation: waterDoubleDrift 9s ease-in-out infinite;
   will-change: transform, opacity;
-  transform: translateZ(0);
 }
 
 @keyframes glintSparkle {
@@ -217,14 +213,14 @@
 
 .watermark-float {
   opacity: 0.04;
-  transform: translate3d(0, 40px, 0) scale3d(0.97, 0.97, 1);
+  transform: translate3d(0, 40px, 0);
   transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .watermark-float.is-revealed {
   opacity: 0.07;
-  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0);
 }
 
 .expand-divider {
@@ -261,7 +257,8 @@
   }
   .hero-water-shimmer, .header-caustic-shimmer, .metallic-liquid-shimmer {
     animation: none !important;
-    background-position: 0 0 !important;
+    background-position: 50% 50% !important;
+    --fluid-shimmer-pos: 50% !important;
   }
 }
 
@@ -287,5 +284,6 @@ body.reduced-motion .hero-water-shimmer,
 body.reduced-motion .header-caustic-shimmer, 
 body.reduced-motion .metallic-liquid-shimmer {
   animation: none !important;
-  background-position: 0 0 !important;
+  background-position: 50% 50% !important;
+  --fluid-shimmer-pos: 50% !important;
 }
