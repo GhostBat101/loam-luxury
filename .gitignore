@@ -44,8 +44,13 @@ notes/
 stitch_output/
 manifest.json
 
-# Local Agents & Skills (Excluded from GitHub)
+# Local Agents, Skills & Rules (Excluded from GitHub)
 .agents/
 .agent/
 _agents/
 _agent/
+AGENTS.md
+GEMINI.md
+CLAUDE.md
+.claude/
+.cursor/
