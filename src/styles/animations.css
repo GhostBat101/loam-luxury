@@ -1,0 +1,291 @@
+/**
+ * Hardware-Accelerated 60 FPS Animation Subsystem.
+ * Defines GPU keyframe animations, scroll reveal states, and reduced-motion overrides.
+ * Communicates with: src/styles/main.css, src/modules/accessibility/motion-controller.ts, and src/modules/animation/scroll-reveal.ts.
+ */
+
+@keyframes waterShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes heroWaveDistort {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) skewX(0deg) scale3d(1, 1, 1);
+    filter: drop-shadow(0 15px 35px rgba(14, 165, 233, 0.25));
+  }
+  33% {
+    transform: translate3d(0, -4px, 0) skewX(-0.4deg) scale3d(1.006, 1.006, 1);
+    filter: drop-shadow(0 20px 45px rgba(14, 165, 233, 0.4));
+  }
+  66% {
+    transform: translate3d(0, 3px, 0) skewX(0.4deg) scale3d(0.998, 0.998, 1);
+    filter: drop-shadow(0 10px 25px rgba(14, 165, 233, 0.2));
+  }
+}
+
+@keyframes waterDoubleDrift {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) scale3d(1, 1, 1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) scale3d(1.012, 1.012, 1);
+    opacity: 0.7;
+  }
+}
+
+.water-drift {
+  animation: waterDoubleDrift 9s ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+@keyframes glintSparkle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: translate3d(0, 0px, 0) scale3d(0.85, 0.85, 1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translate3d(0, -10px, 0) scale3d(1.25, 1.25, 1);
+  }
+}
+
+.hero-glint-1 {
+  animation: glintSparkle 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.hero-glint-2 {
+  animation: glintSparkle 6.5s ease-in-out infinite 1.5s;
+  will-change: transform, opacity;
+}
+
+.hero-glint-3 {
+  animation: glintSparkle 4.8s ease-in-out infinite 3s;
+  will-change: transform, opacity;
+}
+
+@keyframes causticFloat1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate3d(25px, -30px, 0) scale3d(1.3, 1.3, 1);
+    opacity: 0.65;
+  }
+}
+
+@keyframes causticFloat2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate3d(-35px, 20px, 0) scale3d(0.9, 0.9, 1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes causticFloat3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale3d(0.9, 0.9, 1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate3d(15px, 35px, 0) scale3d(1.4, 1.4, 1);
+    opacity: 0.5;
+  }
+}
+
+.caustic-1 {
+  animation: causticFloat1 12s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.caustic-2 {
+  animation: causticFloat2 16s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.caustic-3 {
+  animation: causticFloat3 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes textOceanCaustic {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes telemetryPulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.telemetry-phased-glow {
+  animation: telemetryPulse 4s ease-in-out infinite;
+}
+
+@keyframes scanlineFlash {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.scanline-pulse {
+  animation: scanlineFlash 2.5s steps(3, start) infinite;
+}
+
+@keyframes tidalWaveDrift {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -3px, 0) rotate(0.12deg);
+  }
+}
+
+@keyframes liquidMetallicGlow {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes plateWaveFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) scale3d(1.015, 1.015, 1);
+  }
+}
+
+@keyframes radiusPulseRing {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale3d(0.92, 0.92, 1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale3d(1.05, 1.05, 1);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale3d(1.15, 1.15, 1);
+    opacity: 0;
+  }
+}
+
+.sillage-ring-pulse {
+  animation: radiusPulseRing 3.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  will-change: transform, opacity;
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.watermark-float {
+  opacity: 0.04;
+  transform: translate3d(0, 40px, 0) scale3d(0.97, 0.97, 1);
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.watermark-float.is-revealed {
+  opacity: 0.07;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.expand-divider {
+  position: relative;
+}
+
+.expand-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: var(--color-marine-deep, #053C6B);
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expand-divider.is-visible::after {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal-item, .watermark-float {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .expand-divider::after {
+    width: 100% !important;
+  }
+  .hero-water-shimmer, .header-caustic-shimmer, .metallic-liquid-shimmer {
+    animation: none !important;
+    background-position: 0 0 !important;
+  }
+}
+
+body.reduced-motion *, 
+body.reduced-motion ::before, 
+body.reduced-motion ::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+body.reduced-motion .reveal-item,
+body.reduced-motion .watermark-float {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body.reduced-motion .expand-divider::after {
+  width: 100% !important;
+}
+
+body.reduced-motion .hero-water-shimmer, 
+body.reduced-motion .header-caustic-shimmer, 
+body.reduced-motion .metallic-liquid-shimmer {
+  animation: none !important;
+  background-position: 0 0 !important;
+}
