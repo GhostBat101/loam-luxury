@@ -1,9 +1,0 @@
-2024-10-24 — Technical Note: Loam Luxury Footer Architecture
-
-*   **Subsoil Concept & Telemetry Colophon:** Treat the footer not as an afterthought, but as the raw "subsoil" of the site—synthesizing Brutalist structural transparency with Framer-style dynamic spatial interactions. The anchor element is an exaggerated 14vw ultra-heavy serif logo ("loam luxury") that visually grounds the page, accompanied by a dynamic, live system colophon: viewport dimensions, active CSS variable color chips with click-to-copy functionality, dynamic render time, and build hash.
-
-*   **Tactile Interactive Canvas:** Integrating a low-overhead WebGL/Canvas sediment shader directly into the background of the footer frame. As the cursor moves across the lower grid, it subtly displaces earth-toned noise patterns (terracotta, dark silt, crushed limestone), giving the lower boundary a heavy, physical presence that aligns with the "loam" identity.
-
-*   **Metadata-Dense Site Index:** Replace traditional link columns with a dense, two-tier directory. Tier 1 exposes the meta-curation categories (Site Analysis, Spatial Layouts, Typographic System, Materiality). Tier 2 acts as a live state controller: users can switch global visual modes (e.g., toggle high-contrast wireframe mode, preview raw photographic color grades, or inspect grid overlays across the entire site) directly from the footer controls.
-
-*   **Persistent Micro-Newsletter Module:** A single-line input field styled like an unrendered HTML form element (raw monospaced font, strict border lines). Upon focus, it expands horizontally into a split card offering a choice between "Full Design Dissections" (weekly) or "Visual Telemetry" (monthly), using crisp toggle chips rather than generic dropdowns.
