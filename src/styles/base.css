@@ -1,0 +1,66 @@
+/**
+ * Base Document Rules & Substrate Reset.
+ * Declares viewport standards, atmospheric ambient canvas, scroll behavior, and WCAG focus states.
+ * Communicates with: src/styles/tokens.css, src/styles/main.css, and index.html.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg, #f3f6f9);
+  color: var(--color-ink, #071D31);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: var(--transition-surface);
+}
+
+.ambient-scroll-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse at 15% 15%, rgba(225, 238, 250, 0.65), transparent 50%),
+    radial-gradient(ellipse at 85% 65%, rgba(207, 226, 248, 0.45), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(198, 219, 242, 0.35), transparent 60%);
+  transition: opacity 1s ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-marine-deep, #053C6B) !important;
+  outline-offset: 3px !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+button, input, select, textarea {
+  border-radius: 0px !important;
+}
