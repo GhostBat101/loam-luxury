@@ -43,3 +43,9 @@ docs/
 notes/
 stitch_output/
 manifest.json
+
+# Local Agents & Skills (Excluded from GitHub)
+.agents/
+.agent/
+_agents/
+_agent/
