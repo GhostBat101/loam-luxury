@@ -1,7 +1,0 @@
-2024-03-28 — Research & Strategy Note: Conversion & CTAs for Loam Luxury
-
-*   **Typographic Narrative CTAs over Decorative Buttons:** Looking at raw, text-first layouts from Brutalist Websites, traditional rounded pill buttons feel out of place on an avant-garde editorial platform. Loam Luxury's primary conversions (newsletter subscription and direct design agency inquiries) should use high-contrast, oversized monospace inline prompts—e.g., `[ INITIATE DIRECTIVE ]` or `[ REQUEST CASE STUDY PDF ↓ ]`—embedded directly into editorial copy rather than floating as isolated UI elements.
-
-*   **Intentional Friction for Exclusivity:** Standard conversion CRO focuses on zero-friction forms, but high-end design consultancies convert better with perceived scarcity. Replace the standard contact form with a structured 3-step "Briefing Terminal" that requires users to select budget tiers, project scope, and launch timeline before revealing the email submit action. The UI should feel like an interactive manifest rather than a sales funnel.
-
-*   **Monochromatic Persistent Status Bar:** Instead of intrusive popups or sticky header banners, implement a single-line, fixed bottom marquee inspired by stock tickers and raw web interfaces. It displays current studio availability (e.g., `STATUS: ACCEPTING 2 CLIENT COMMISSIONS FOR Q3 2024 → INQUIRE NOW`) in stark black/white,
