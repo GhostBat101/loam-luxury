@@ -1,9 +1,9 @@
 [
   {
     "radiusMeters": 0.5,
-    "buttonLabel": "0.5M · SKIN AURA",
-    "auraTitle": "0.5 M · INTIMATE AURA",
-    "headline": "INTIMATE COASTAL AURA · 24 HR PERSISTENCE",
+    "buttonLabel": "0.5M · CLOSE TO SKIN",
+    "auraTitle": "0.5M · PERSONAL SPACE",
+    "headline": "CLOSE & PERSONAL · STAYS ALL DAY",
     "persistenceHours": 24,
     "strokeDashoffset": 0,
     "haloDiameterPx": 240,
@@ -12,9 +12,9 @@
   },
   {
     "radiusMeters": 1.5,
-    "buttonLabel": "1.5M · CONVERSATION",
-    "auraTitle": "1.5 M · CONVERSATION PROJECTION",
-    "headline": "CONVERSATION PROJECTION · 16 HR PROJECTION",
+    "buttonLabel": "1.5M · ARM'S LENGTH",
+    "auraTitle": "1.5M · CONVERSATION REACH",
+    "headline": "NATURAL CONVERSATION · NOTICEABLE NEARBY",
     "persistenceHours": 16,
     "strokeDashoffset": 209,
     "haloDiameterPx": 380,
@@ -24,8 +24,8 @@
   {
     "radiusMeters": 3.0,
     "buttonLabel": "3.0M · SCENT TRAIL",
-    "auraTitle": "3.0 M · EXPANSIVE SCENT TRAIL",
-    "headline": "EXPANSIVE RADIUS · 8-12 HR BROAD SILLAGE",
+    "auraTitle": "3.0M · LASTING IMPRESSION",
+    "headline": "SCENT TRAIL · TURNS HEADS AS YOU WALK BY",
     "persistenceHours": 10,
     "strokeDashoffset": 366,
     "haloDiameterPx": 520,
@@ -33,3 +33,4 @@
     "estimatedVolumeSqm": 28.27
   }
 ]
+
