@@ -15,24 +15,23 @@ export function renderRadius(): string {
         03
       </div>
       <div class="relative z-10 max-w-[1720px] mx-auto">
-        <div class="expand-divider w-full flex flex-col sm:flex-row items-start sm:items-baseline justify-between mb-20 pb-6 hairline-border-b reveal-item">
+        <div class="expand-divider w-full flex items-baseline justify-between mb-20 pb-6 hairline-border-b reveal-item">
           <div class="flex items-baseline gap-6 lg:gap-10">
             <span aria-hidden="true" class="font-display text-5xl lg:text-7xl text-[#071D31] font-semibold leading-none tracking-tight tidal-drift-text">03</span>
-            <h2 class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-extrabold m-0" id="heading-radius">[RADIUS // SILLAGE METRIC]</h2>
+            <h2 class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-bold m-0" id="heading-radius">SILLAGE RADIUS</h2>
           </div>
-          <span class="font-mono text-[10px] text-[#1C3B5E] uppercase tracking-[0.22em] font-bold mt-2 sm:mt-0">// INTERACTIVE PROJECTION DISPERSION CALCULATOR</span>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-8 reveal-item" style="transition-delay: 150ms;">
             <h3 class="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-[1.1] font-medium tidal-drift-text text-[#071D31]" id="sillage-title-text">
               ${initial.headline}
             </h3>
-            <p class="font-mono text-xs uppercase tracking-widest text-[#1C3B5E] flex items-center gap-2 pt-2 font-bold">
-              <span class="text-[#053C6B] font-extrabold">[CLINICAL]</span> EPIDERMALLY TESTED · DIRECT APPLICATION EXTRAIT DE PARFUM
+            <p class="font-mono text-xs uppercase tracking-widest text-[#1C3B5E] flex items-center gap-2 pt-2 font-semibold">
+              EPIDERMALLY TESTED · DIRECT APPLICATION EXTRAIT DE PARFUM
             </p>
             <div class="pt-4 space-y-4">
               <div class="flex justify-between items-baseline font-mono text-xs text-[#071D31] tracking-wider uppercase font-bold">
-                <label class="text-[#053C6B] cursor-pointer" for="sillage-slider">// DRAG PROJECTION RADIUS:</label>
+                <label class="text-[#053C6B] cursor-pointer" for="sillage-slider">PROJECTION RADIUS:</label>
                 <span class="text-sm font-extrabold text-[#071D31]" id="projection-label">${initial.projectionLabel}</span>
               </div>
               <div class="w-full">
@@ -62,12 +61,12 @@ export function renderRadius(): string {
                   <span class="font-mono text-2xl sm:text-3xl text-[#053C6B] ml-2 font-extrabold">HR</span>
                 </div>
                 <div class="font-mono text-[9px] uppercase tracking-widest text-[#1C3B5E] font-bold mt-2" id="decay-mode-text">
-                  [CALIBRATED EPIDERMAL DECAY]
+                  EPIDERMAL PERSISTENCE
                 </div>
               </div>
             </div>
             <div class="font-mono text-xs text-[#053C6B] uppercase tracking-wider mt-2 font-bold" id="coverage-sqm">
-              EST. SILLAGE VOLUME: ~${initial.estimatedFootprintAreaSqm} M² HEMISPHERE
+              ESTIMATED SILLAGE: ~${initial.estimatedFootprintAreaSqm} M²
             </div>
           </div>
         </div>
@@ -104,7 +103,7 @@ export function setupRadius(): void {
       sillageTitleText.textContent = metrics.headline;
     }
     if (coverageSqm) {
-      coverageSqm.textContent = `EST. SILLAGE VOLUME: ~${metrics.estimatedFootprintAreaSqm} M² HEMISPHERE`;
+      coverageSqm.textContent = `ESTIMATED SILLAGE: ~${metrics.estimatedFootprintAreaSqm} M²`;
     }
     if (persistenceVal) {
       persistenceVal.textContent = metrics.persistenceHours.toString();
