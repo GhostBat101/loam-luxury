@@ -43,13 +43,13 @@ export function renderHero(): string {
             THALASSA
           </h1>
           <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4" style="transition-delay: 350ms;">
-            NOT A PERFUME. CAPTURED SEA BREEZE.
+            THE PURE SCENT OF THE AEGEAN SEA.
           </p>
         </div>
         <div class="reveal-item flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-16 pt-6 border-t border-[#CFE2FE]/25 text-[#CFE2FE] font-mono text-[10px] tracking-widest uppercase font-semibold" style="transition-delay: 450ms;">
-          <span class="text-white/80 font-medium">EXTRAIT DE PARFUM · 100 ML · 34% VOL</span>
+          <span class="text-white/80 font-medium">EXTRAIT DE PARFUM · 100 ML · 34% PURE PERFUME OIL</span>
           <a class="nav-magnetic flex items-center gap-3 text-[#FAFCFF] hover:text-[#38bdf8] transition-all duration-300 pb-1 font-bold group" href="#spectrum">
-            <span class="tracking-[0.25em]">EXPLORE SPECTRUM</span>
+            <span class="tracking-[0.25em]">EXPLORE THE NOTES</span>
             <span aria-hidden="true" class="group-hover:translate-y-1.5 transition-transform duration-300 font-bold">↓</span>
           </a>
         </div>
