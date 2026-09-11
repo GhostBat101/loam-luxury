@@ -80,11 +80,11 @@ describe('sillage-math', () => {
   });
 
   describe('calculateSillageMetrics', () => {
-    it('computes complete sillage bundle for 0.5m intimate aura', () => {
+    it('computes complete sillage bundle for 0.5m close presence', () => {
       const result = calculateSillageMetrics(0.5);
       expect(result.radiusMeters).toBe(0.5);
-      expect(result.projectionLabel).toBe('0.5 M [INTIMATE AURA]');
-      expect(result.headline).toBe('INTIMATE COASTAL AURA · 24 HR PERSISTENCE');
+      expect(result.projectionLabel).toBe('0.5M · CLOSE & PERSONAL');
+      expect(result.headline).toBe('CLOSE & PERSONAL · STAYS ALL DAY');
       expect(result.persistenceHours).toBe(24);
       expect(result.strokeDashoffset).toBe(0);
       expect(result.haloDiameterPx).toBe(240);
@@ -92,11 +92,11 @@ describe('sillage-math', () => {
       expect(result.estimatedFootprintAreaSqm).toBe(0.79);
     });
 
-    it('computes complete sillage bundle for 1.5m conversation projection', () => {
+    it('computes complete sillage bundle for 1.5m arm\'s length projection', () => {
       const result = calculateSillageMetrics(1.5);
       expect(result.radiusMeters).toBe(1.5);
-      expect(result.projectionLabel).toBe('1.5 M [CONVERSATION PROJECTION]');
-      expect(result.headline).toBe('CONVERSATION PROJECTION · 16 HR PROJECTION');
+      expect(result.projectionLabel).toBe('1.5M · ARM\'S LENGTH');
+      expect(result.headline).toBe('NATURAL CONVERSATION · NOTICEABLE NEARBY');
       expect(result.persistenceHours).toBe(16);
       expect(result.strokeDashoffset).toBe(209);
       expect(result.haloDiameterPx).toBe(380);
@@ -106,8 +106,8 @@ describe('sillage-math', () => {
     it('computes complete sillage bundle for 3.0m expansive trail', () => {
       const result = calculateSillageMetrics(3.0);
       expect(result.radiusMeters).toBe(3.0);
-      expect(result.projectionLabel).toBe('3.0 M [EXPANSIVE SCENT TRAIL]');
-      expect(result.headline).toBe('EXPANSIVE RADIUS · 8-12 HR BROAD SILLAGE');
+      expect(result.projectionLabel).toBe('3.0M · SCENT TRAIL');
+      expect(result.headline).toBe('SCENT TRAIL · TURNS HEADS AS YOU WALK BY');
       expect(result.persistenceHours).toBe(10);
       expect(result.strokeDashoffset).toBe(366);
       expect(result.haloDiameterPx).toBe(520);
