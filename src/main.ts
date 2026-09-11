@@ -10,8 +10,6 @@ import { initSmoothScroll } from './modules/scroll/smooth-scroll';
 import { initScrollBackground } from './modules/animation/scroll-background';
 import { initScrollReveal } from './modules/animation/scroll-reveal';
 import { initFluidShimmer } from './modules/animation/fluid-shimmer';
-import { renderArchitecturalRail } from './components/layout/ArchitecturalRail';
-import { renderTelemetryRibbon } from './components/layout/TelemetryRibbon';
 import { renderHeader, setupHeader } from './components/layout/Header';
 import { renderFooter } from './components/layout/Footer';
 import { renderHero } from './components/sections/Hero';
@@ -34,10 +32,8 @@ function bootstrap(): void {
 
   app.innerHTML = `
     <div aria-hidden="true" class="ambient-scroll-canvas"></div>
-    ${renderArchitecturalRail()}
     ${renderHeader()}
     <main class="w-full pt-20 relative z-10" id="main-content">
-      ${renderTelemetryRibbon()}
       ${renderHero()}
       ${renderOrigin()}
       ${renderSpectrum()}
