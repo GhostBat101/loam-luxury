@@ -1,15 +1,15 @@
 {
-  "specimenId": "SPECIMEN // 001",
+  "specimenId": "SPECIMEN 001",
   "matrixName": "THALASSA MATRIX",
   "coordinates": "36.8433°N / 25.8916°E",
   "salinityIndex": "38.5 PSU",
-  "extractionTitle": "PROJECT // 002 · AEGEAN SUBSTRATE",
+  "extractionTitle": "AEGEAN SUBSTRATE",
   "concentration": "ARCHIVAL EXTRACTION 34% CONCENTRÉ",
-  "status": "STATUS // SPECIMEN READY",
+  "status": "SPECIMEN READY",
   "provenanceData": [
-    { "label": "// SOURCE", "value": "CYCLADES, GREECE" },
-    { "label": "// ELEVATION", "value": "0 M (TIDAL LINE)" },
-    { "label": "// SALINITY RATIO", "value": "38.5 PSU" },
-    { "label": "// THERMAL PEAK", "value": "32.4°C NOON FLUX" }
+    { "label": "SOURCE", "value": "CYCLADES, GREECE" },
+    { "label": "ELEVATION", "value": "0 M (TIDAL LINE)" },
+    { "label": "SALINITY", "value": "38.5 PSU" },
+    { "label": "THERMAL PEAK", "value": "32.4°C NOON FLUX" }
   ]
 }
