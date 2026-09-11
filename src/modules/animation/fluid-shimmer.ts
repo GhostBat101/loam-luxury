@@ -1,6 +1,6 @@
 /**
  * Fluid Cursor-Responsive Shimmer Animation Engine.
- * Computes fluid spring physics, cursor velocity ripples, and ambient sine wave sweeps for metallic gradients.
+ * Computes calibrated spring physics, velocity wake damping, and seamless phase-synchronized ambient sweeps.
  * Communicates with: src/main.ts, src/styles/typography.css, and src/modules/accessibility/motion-controller.ts.
  */
 
@@ -15,14 +15,19 @@ export interface FluidShimmerItem {
   state: FluidPhysicsState;
   isHovered: boolean;
   ambientPhase: number;
+  leaveTimer: number | null;
 }
 
 export const FLUID_CONFIG = {
-  SPRING_K: 0.12,
-  DAMPING: 0.82,
-  AMBIENT_SPEED: 0.02,
+  SPRING_K: 0.065,
+  DAMPING: 0.70,
+  MAX_VELOCITY: 3.2,
+  AMBIENT_SPEED: 0.018,
   GRADIENT_OFFSET_START: -30,
-  GRADIENT_SPAN: 160
+  GRADIENT_SPAN: 160,
+  PROXIMITY_PADDING_X: 80,
+  PROXIMITY_PADDING_Y: 140,
+  HOVER_GRACE_MS: 200
 } as const;
 
 export function calculateNormalizedCursorPosition(clientX: number, rect: DOMRect): number {
@@ -34,14 +39,47 @@ export function calculateNormalizedCursorPosition(clientX: number, rect: DOMRect
   return (clampedX / rect.width) * 100;
 }
 
+export function isPointerWithinShimmerBounds(
+  clientX: number,
+  clientY: number,
+  rect: DOMRect,
+  paddingX: number = FLUID_CONFIG.PROXIMITY_PADDING_X,
+  paddingY: number = FLUID_CONFIG.PROXIMITY_PADDING_Y
+): boolean {
+  if (!rect || rect.width <= 0 || rect.height <= 0) {
+    return false;
+  }
+  return (
+    clientX >= rect.left - paddingX &&
+    clientX <= rect.right + paddingX &&
+    clientY >= rect.top - paddingY &&
+    clientY <= rect.bottom + paddingY
+  );
+}
+
+export function syncAmbientPhaseWithPosition(current: number, velocity: number = 0): number {
+  const normalized = Math.max(-1, Math.min(1, (current - 50) / 45));
+  const basePhase = Math.asin(normalized);
+  if (velocity < 0) {
+    return Math.PI - basePhase;
+  }
+  return basePhase;
+}
+
 export function stepFluidPhysics(
   state: FluidPhysicsState,
   springK: number = FLUID_CONFIG.SPRING_K,
-  damping: number = FLUID_CONFIG.DAMPING
+  damping: number = FLUID_CONFIG.DAMPING,
+  maxVelocity: number = Infinity
 ): FluidPhysicsState {
   const displacement = state.target - state.current;
   const force = displacement * springK;
-  const newVelocity = (state.velocity + force) * damping;
+  let newVelocity = (state.velocity + force) * damping;
+
+  if (Math.abs(newVelocity) > maxVelocity) {
+    newVelocity = Math.sign(newVelocity) * maxVelocity;
+  }
+
   const newCurrent = state.current + newVelocity;
 
   return {
@@ -60,11 +98,11 @@ export function calculateAmbientSinePosition(phase: number): number {
   return 50 + Math.sin(phase) * 45;
 }
 
-export function calculateFluidRipple(velocity: number, time: number): number {
-  if (Math.abs(velocity) < 0.001) {
+export function calculateFluidRipple(velocity: number, _time: number = 0): number {
+  if (Math.abs(velocity) < 0.02) {
     return 0;
   }
-  return Math.sin(time * 6) * Math.min(5, velocity * 0.35);
+  return -Math.sign(velocity) * Math.min(0.5, Math.abs(velocity) * 0.08);
 }
 
 export function initFluidShimmer(): () => void {
@@ -79,38 +117,53 @@ export function initFluidShimmer(): () => void {
     element,
     state: { current: 50, velocity: 0, target: 50 },
     isHovered: false,
-    ambientPhase: index * (Math.PI / 3)
+    ambientPhase: index * (Math.PI / 3),
+    leaveTimer: null
   }));
 
-  const cleanups: Array<() => void> = [];
+  const onGlobalPointerMove = (event: PointerEvent) => {
+    const clientX = event.clientX;
+    const clientY = event.clientY;
 
-  items.forEach((item) => {
-    const onPointerEnter = (event: PointerEvent) => {
-      item.isHovered = true;
+    items.forEach((item) => {
       const rect = item.element.getBoundingClientRect();
-      item.state.target = calculateNormalizedCursorPosition(event.clientX, rect);
-    };
+      const inProximity = isPointerWithinShimmerBounds(clientX, clientY, rect);
 
-    const onPointerMove = (event: PointerEvent) => {
-      item.isHovered = true;
-      const rect = item.element.getBoundingClientRect();
-      item.state.target = calculateNormalizedCursorPosition(event.clientX, rect);
-    };
-
-    const onPointerLeave = () => {
-      item.isHovered = false;
-    };
-
-    item.element.addEventListener('pointerenter', onPointerEnter);
-    item.element.addEventListener('pointermove', onPointerMove);
-    item.element.addEventListener('pointerleave', onPointerLeave);
-
-    cleanups.push(() => {
-      item.element.removeEventListener('pointerenter', onPointerEnter);
-      item.element.removeEventListener('pointermove', onPointerMove);
-      item.element.removeEventListener('pointerleave', onPointerLeave);
+      if (inProximity) {
+        if (item.leaveTimer !== null) {
+          window.clearTimeout(item.leaveTimer);
+          item.leaveTimer = null;
+        }
+        item.isHovered = true;
+        item.element.classList.add('is-shimmer-hovered');
+        item.state.target = calculateNormalizedCursorPosition(clientX, rect);
+      } else if (item.isHovered && item.leaveTimer === null) {
+        item.leaveTimer = window.setTimeout(() => {
+          item.isHovered = false;
+          item.element.classList.remove('is-shimmer-hovered');
+          item.ambientPhase = syncAmbientPhaseWithPosition(item.state.current, item.state.velocity);
+          item.leaveTimer = null;
+        }, FLUID_CONFIG.HOVER_GRACE_MS);
+      }
     });
-  });
+  };
+
+  const onGlobalPointerLeave = () => {
+    items.forEach((item) => {
+      if (item.leaveTimer !== null) {
+        window.clearTimeout(item.leaveTimer);
+        item.leaveTimer = null;
+      }
+      if (item.isHovered) {
+        item.isHovered = false;
+        item.element.classList.remove('is-shimmer-hovered');
+        item.ambientPhase = syncAmbientPhaseWithPosition(item.state.current, item.state.velocity);
+      }
+    });
+  };
+
+  window.addEventListener('pointermove', onGlobalPointerMove, { passive: true });
+  document.addEventListener('pointerleave', onGlobalPointerLeave);
 
   let animationFrameId = 0;
   let lastTimestamp = performance.now();
@@ -133,7 +186,12 @@ export function initFluidShimmer(): () => void {
         item.state.target = calculateAmbientSinePosition(item.ambientPhase);
       }
 
-      item.state = stepFluidPhysics(item.state);
+      item.state = stepFluidPhysics(
+        item.state,
+        FLUID_CONFIG.SPRING_K,
+        FLUID_CONFIG.DAMPING,
+        FLUID_CONFIG.MAX_VELOCITY
+      );
       const ripple = calculateFluidRipple(item.state.velocity, timeSec);
       const visualPercent = item.state.current + ripple;
       const bgPositionPercent = calculateShimmerBackgroundPosition(visualPercent);
@@ -148,6 +206,12 @@ export function initFluidShimmer(): () => void {
 
   return () => {
     cancelAnimationFrame(animationFrameId);
-    cleanups.forEach((fn) => fn());
+    window.removeEventListener('pointermove', onGlobalPointerMove);
+    document.removeEventListener('pointerleave', onGlobalPointerLeave);
+    items.forEach((item) => {
+      if (item.leaveTimer !== null) {
+        window.clearTimeout(item.leaveTimer);
+      }
+    });
   };
 }
