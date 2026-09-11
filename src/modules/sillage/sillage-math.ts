@@ -48,24 +48,24 @@ export function calculateSillageMetrics(rawRadius: number): SillageCalculationRe
   const persistenceHours = calculatePersistenceHours(radius);
   const strokeDashoffset = calculateStrokeDashoffset(persistenceHours);
 
-  let projectionLabel = '0.5 M [INTIMATE AURA]';
-  let headline = 'INTIMATE COASTAL AURA · 24 HR PERSISTENCE';
+  let projectionLabel = '0.5M · CLOSE & PERSONAL';
+  let headline = 'CLOSE & PERSONAL · STAYS ALL DAY';
   let haloDiameterPx = 240;
   let coreDiameterPx = 180;
 
   if (radius <= 0.5) {
-    projectionLabel = '0.5 M [INTIMATE AURA]';
-    headline = 'INTIMATE COASTAL AURA · 24 HR PERSISTENCE';
+    projectionLabel = '0.5M · CLOSE & PERSONAL';
+    headline = 'CLOSE & PERSONAL · STAYS ALL DAY';
     haloDiameterPx = 240;
     coreDiameterPx = 180;
   } else if (radius <= 1.5) {
-    projectionLabel = '1.5 M [CONVERSATION PROJECTION]';
-    headline = 'CONVERSATION PROJECTION · 16 HR PROJECTION';
+    projectionLabel = '1.5M · ARM\'S LENGTH';
+    headline = 'NATURAL CONVERSATION · NOTICEABLE NEARBY';
     haloDiameterPx = 380;
     coreDiameterPx = 290;
   } else {
-    projectionLabel = '3.0 M [EXPANSIVE SCENT TRAIL]';
-    headline = 'EXPANSIVE RADIUS · 8-12 HR BROAD SILLAGE';
+    projectionLabel = '3.0M · SCENT TRAIL';
+    headline = 'SCENT TRAIL · TURNS HEADS AS YOU WALK BY';
     haloDiameterPx = 520;
     coreDiameterPx = 420;
   }
