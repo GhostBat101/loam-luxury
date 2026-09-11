@@ -26,16 +26,16 @@ export function renderCartDrawer(): string {
       <div aria-label="Specimen Reservation Manifest" aria-modal="true" class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-[#eef4ff] shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-400 ease-out border-l border-[#053C6B]/20" id="cart-drawer-panel" role="dialog">
         <div class="p-6 sm:p-8 hairline-border-b flex justify-between items-center bg-[#f1f5f9]/80 backdrop-blur-md">
           <div>
-            <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-[#053C6B] font-extrabold">// ARCHIVAL ALLOCATION</span>
+            <span class="font-mono text-[9px] uppercase tracking-[0.25em] text-[#053C6B] font-bold">ARCHIVAL ALLOCATION</span>
             <h3 class="font-display text-2xl text-[#071D31] font-semibold uppercase tracking-tight">SPECIMEN MANIFEST</h3>
           </div>
-          <button aria-label="Close cart drawer" class="font-mono text-xs text-[#071D31] hover:text-[#053C6B] border border-[#285384]/20 p-2 hover:border-[#053C6B] transition-colors cursor-pointer focus-visible:outline-none" id="cart-close-btn" type="button">
-            [ESC // CLOSE]
+          <button aria-label="Close cart drawer" class="font-mono text-xs text-[#071D31] hover:text-[#053C6B] border border-[#285384]/20 px-3 py-1.5 hover:border-[#053C6B] transition-colors cursor-pointer focus-visible:outline-none" id="cart-close-btn" type="button">
+            CLOSE (ESC)
           </button>
         </div>
         <div class="p-6 sm:p-8 flex-1 overflow-y-auto space-y-6" id="cart-items-container">
           <div class="text-center py-12 text-[#1C3B5E] font-mono text-xs tracking-widest uppercase font-semibold" id="cart-empty-state">
-            [NO SPECIMENS ALLOCATED]
+            NO ITEMS ALLOCATED
           </div>
         </div>
         <div class="p-6 sm:p-8 hairline-border-t bg-[#e9f0f7]/90 space-y-4">
@@ -44,14 +44,14 @@ export function renderCartDrawer(): string {
             <span class="text-[#071D31] font-extrabold text-sm" id="cart-subtotal">$0 USD</span>
           </div>
           <div class="flex justify-between font-mono text-[9px] uppercase tracking-widest text-[#053C6B] font-bold pb-2">
-            <span>// DISPATCH:</span>
+            <span>DISPATCH:</span>
             <span>COMPLIMENTARY SECURE</span>
           </div>
           <button class="btn-reserve-kinetic w-full h-14 bg-[#071D31] text-[#FAFCFF] hover:bg-[#053C6B] font-mono text-xs uppercase tracking-[0.2em] flex items-center justify-center border border-[#053C6B] font-bold cursor-pointer transition-all duration-300 focus-visible:outline-none disabled:opacity-40 disabled:pointer-events-none" id="cart-checkout-btn" type="button">
             <span>INITIATE ALLOCATION</span>
           </button>
-          <div class="font-mono text-[9px] uppercase tracking-widest text-center text-[#1C3B5E] font-bold" id="cart-confirmation-msg">
-            [SECURE ARCHIVAL PROTOCOL · EDITION 001]
+          <div class="font-mono text-[9px] uppercase tracking-widest text-center text-[#1C3B5E] font-semibold" id="cart-confirmation-msg">
+            SECURE ARCHIVAL PROTOCOL · FIRST EDITION
           </div>
         </div>
       </div>
@@ -104,11 +104,11 @@ export function setupCartDrawer(): CartDrawerController {
         <div class="p-4 border border-[#285384]/20 bg-white/70 backdrop-blur-sm space-y-2">
           <div class="flex justify-between items-start">
             <div>
-              <span class="font-mono text-[9px] text-[#053C6B] font-extrabold uppercase">[SPECIMEN // 00${index + 1}]</span>
+              <span class="font-mono text-[9px] text-[#053C6B] font-bold uppercase">ITEM 0${index + 1}</span>
               <h4 class="font-display text-lg text-[#071D31] font-semibold">${item.title}</h4>
             </div>
             <button class="cart-remove-item font-mono text-[10px] text-[#BA1A1A] font-bold p-1 hover:underline cursor-pointer" data-index="${index}" type="button">
-              [REMOVE]
+              REMOVE
             </button>
           </div>
           <div class="flex justify-between items-baseline font-mono text-xs pt-1 border-t border-[#285384]/10">
@@ -169,10 +169,10 @@ export function setupCartDrawer(): CartDrawerController {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       checkoutBtn.disabled = true;
-      checkoutBtn.innerHTML = '<span>DISPATCH CONFIRMED // ALLOC-2025-0841</span>';
+      checkoutBtn.innerHTML = '<span>DISPATCH CONFIRMED · ALLOC-2025-0841</span>';
       if (confirmationMsg) {
-        confirmationMsg.textContent = '[RESERVATION LOGGED · CERTIFICATE DISPATCHED TO EMAIL]';
-        confirmationMsg.classList.add('text-[#053C6B]', 'font-extrabold');
+        confirmationMsg.textContent = 'RESERVATION LOGGED · CERTIFICATE DISPATCHED TO EMAIL';
+        confirmationMsg.classList.add('text-[#053C6B]', 'font-bold');
       }
       setTimeout(() => {
         items = [];
@@ -180,8 +180,8 @@ export function setupCartDrawer(): CartDrawerController {
         notify();
         checkoutBtn.innerHTML = '<span>INITIATE ALLOCATION</span>';
         if (confirmationMsg) {
-          confirmationMsg.textContent = '[SECURE ARCHIVAL PROTOCOL · EDITION 001]';
-          confirmationMsg.classList.remove('text-[#053C6B]', 'font-extrabold');
+          confirmationMsg.textContent = 'SECURE ARCHIVAL PROTOCOL · FIRST EDITION';
+          confirmationMsg.classList.remove('text-[#053C6B]', 'font-bold');
         }
         close();
       }, 2500);
