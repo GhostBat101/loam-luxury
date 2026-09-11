@@ -1,12 +1,14 @@
 /**
  * Fluid Shimmer Animation Engine Test Suite.
- * Verifies cursor tracking math, spring physics, boundary clamping, and ambient sine wave oscillation.
+ * Verifies cursor tracking math, spring physics, velocity clamping, ambient phase synchronization, proximity detection, and ripple wake.
  * Communicates with: src/modules/animation/fluid-shimmer.ts and vitest.
  */
 
 import { describe, it, expect } from 'vitest';
 import {
   calculateNormalizedCursorPosition,
+  isPointerWithinShimmerBounds,
+  syncAmbientPhaseWithPosition,
   stepFluidPhysics,
   calculateShimmerBackgroundPosition,
   calculateAmbientSinePosition,
@@ -51,6 +53,37 @@ describe('FluidShimmer Engine', () => {
     expect(step2.current).toBeLessThanOrEqual(100);
   });
 
+  it('clamps velocity when maximum velocity limit is specified', () => {
+    const initialState: FluidPhysicsState = {
+      current: 0,
+      velocity: 0,
+      target: 100
+    };
+
+    const clampedStep = stepFluidPhysics(initialState, 0.1, 0.8, 3.2);
+    expect(clampedStep.velocity).toBe(3.2);
+    expect(clampedStep.current).toBe(3.2);
+  });
+
+  it('critically dampens motion without oscillatory ringing across multiple steps', () => {
+    let state: FluidPhysicsState = {
+      current: 10,
+      velocity: 0,
+      target: 90
+    };
+
+    let peakOvershoot = 0;
+    for (let index = 0; index < 50; index++) {
+      state = stepFluidPhysics(state, 0.065, 0.70, 3.2);
+      if (state.current > 90) {
+        peakOvershoot = Math.max(peakOvershoot, state.current - 90);
+      }
+    }
+
+    expect(peakOvershoot).toBeLessThan(1.0);
+    expect(state.current).toBeCloseTo(90, 0);
+  });
+
   it('maps normalized percentage to CSS background-position percentage for a 260% gradient', () => {
     expect(calculateShimmerBackgroundPosition(0)).toBeCloseTo(-30, 1);
     expect(calculateShimmerBackgroundPosition(50)).toBeCloseTo(50, 1);
@@ -69,11 +102,43 @@ describe('FluidShimmer Engine', () => {
     expect(posAtThreeQuarter).toBeCloseTo(5, 1);
   });
 
-  it('calculates velocity-induced fluid ripple oscillation', () => {
+  it('synchronizes ambient phase to exact position with zero discontinuity', () => {
+    const testPositions = [10, 25, 50, 72.5, 90, 95];
+
+    testPositions.forEach((pos) => {
+      const syncedPhase = syncAmbientPhaseWithPosition(pos);
+      const recomputedPos = calculateAmbientSinePosition(syncedPhase);
+      expect(recomputedPos).toBeCloseTo(pos, 4);
+    });
+  });
+
+  it('synchronizes ambient phase with directional momentum', () => {
+    const leftwardPhase = syncAmbientPhaseWithPosition(70, -1.5);
+    const rightwardPhase = syncAmbientPhaseWithPosition(70, 1.5);
+
+    const leftwardNext = calculateAmbientSinePosition(leftwardPhase + 0.02);
+    const rightwardNext = calculateAmbientSinePosition(rightwardPhase + 0.02);
+
+    expect(leftwardNext).toBeLessThan(70);
+    expect(rightwardNext).toBeGreaterThan(70);
+  });
+
+  it('detects pointer proximity within expanded rectangular margin', () => {
+    const rect = { left: 100, right: 300, top: 200, bottom: 400, width: 200, height: 200 } as DOMRect;
+
+    expect(isPointerWithinShimmerBounds(200, 300, rect, 50, 100)).toBe(true);
+    expect(isPointerWithinShimmerBounds(70, 300, rect, 50, 100)).toBe(true);
+    expect(isPointerWithinShimmerBounds(40, 300, rect, 50, 100)).toBe(false);
+    expect(isPointerWithinShimmerBounds(200, 120, rect, 50, 100)).toBe(true);
+    expect(isPointerWithinShimmerBounds(200, 90, rect, 50, 100)).toBe(false);
+  });
+
+  it('produces bounded, smooth ripple wake without high-frequency stutter', () => {
     const staticRipple = calculateFluidRipple(0, 10);
     expect(staticRipple).toBe(0);
 
     const activeRipple = calculateFluidRipple(10, 0);
     expect(Math.abs(activeRipple)).toBeLessThanOrEqual(5);
+    expect(Math.abs(activeRipple)).toBeLessThan(1.0);
   });
 });
