@@ -27,18 +27,18 @@ export function renderOrigin(): string {
         <div class="expand-divider w-full flex items-baseline justify-between mb-20 pb-6 hairline-border-b reveal-item">
           <div class="flex items-baseline gap-6 lg:gap-10">
             <span aria-hidden="true" class="font-display text-5xl lg:text-7xl text-[#071D31] font-semibold leading-none tracking-tight tidal-drift-text">01</span>
-            <span class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-bold">PROVENANCE · CYCLADES</span>
+            <span class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-bold">01 · THE ORIGIN</span>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div class="lg:col-span-8 reveal-item" style="transition-delay: 150ms;">
             <h2 class="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-[1.1] font-medium tracking-tight text-[#071D31] cursor-default" id="heading-origin">
-              AEGEAN SEA SALT · SOLAR WINDS · WHITE SUN.
+              GATHERED FROM THE SEA. CRAFTED BY THE SUN.
             </h2>
             <div class="mt-10 flex flex-wrap gap-6 font-mono text-[10px] uppercase tracking-widest text-[#1C3B5E] font-semibold">
-              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">WATERLINE DIRECT EXTRACTION</span>
-              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">ZERO SYNTHETIC FIXATIVE</span>
-              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">120-DAY SOLAR MACERATION</span>
+              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">BOTTLED BY THE AEGEAN SEA</span>
+              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">ZERO SYNTHETIC FILLERS</span>
+              <span class="hairline-border-b pb-1 text-[#053C6B] font-bold">NATURALLY AGED IN SUNLIGHT</span>
             </div>
           </div>
           <div class="lg:col-span-4 font-mono text-xs text-[#1C3B5E] tracking-widest uppercase space-y-6 pt-2 lg:hairline-border-l lg:pl-12 reveal-item" style="transition-delay: 250ms;">
