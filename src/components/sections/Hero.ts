@@ -10,10 +10,8 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[1]">
         <picture>
           <source srcset="/images/hero-bg.webp" type="image/webp" />
-          <img alt="Aegean coastal background view" class="w-full h-full object-cover object-center scale-[1.01]" src="/images/hero-bg.jpg" />
+          <img alt="Aegean coastal background view" class="w-full h-full object-cover object-center" src="/images/hero-bg.jpg" />
         </picture>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#071D31]/75 via-[#071D31]/20 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#071D31]/50 via-transparent to-[#071D31]/30"></div>
         <div aria-hidden="true" class="caustic-1 absolute top-1/4 left-1/5 w-72 h-72 rounded-full bg-gradient-to-tr from-[#0EA5E9]/20 via-[#7dd3fc]/15 to-transparent blur-3xl pointer-events-none"></div>
         <div aria-hidden="true" class="caustic-2 absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gradient-to-bl from-[#38bdf8]/15 via-[#CFE2FE]/10 to-transparent blur-3xl pointer-events-none"></div>
         <div aria-hidden="true" class="caustic-3 absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-gradient-to-r from-[#0284c7]/20 to-transparent blur-2xl pointer-events-none"></div>
@@ -36,15 +34,8 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[3]">
         <picture>
           <source srcset="/images/hero-reef.webp" type="image/webp" />
-          <img alt="Aegean coastal reef rocks" class="w-full h-full object-cover object-center scale-[1.01]" src="/images/hero-reef.png" />
+          <img alt="Aegean coastal reef rocks" class="w-full h-full object-cover object-center" src="/images/hero-reef.png" />
         </picture>
-        <div class="absolute inset-0 scale-[1.01]" style="-webkit-mask-image: url('/images/hero-reef.webp'); mask-image: url('/images/hero-reef.webp'); -webkit-mask-size: cover; mask-size: cover; -webkit-mask-position: center; mask-position: center; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#071D31]/75 via-[#071D31]/20 to-transparent"></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-[#071D31]/50 via-transparent to-[#071D31]/30"></div>
-          <div aria-hidden="true" class="caustic-1 absolute top-1/4 left-1/5 w-72 h-72 rounded-full bg-gradient-to-tr from-[#0EA5E9]/20 via-[#7dd3fc]/15 to-transparent blur-3xl pointer-events-none"></div>
-          <div aria-hidden="true" class="caustic-2 absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gradient-to-bl from-[#38bdf8]/15 via-[#CFE2FE]/10 to-transparent blur-3xl pointer-events-none"></div>
-          <div aria-hidden="true" class="caustic-3 absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-gradient-to-r from-[#0284c7]/20 to-transparent blur-2xl pointer-events-none"></div>
-        </div>
       </div>
 
       <div class="relative w-full px-6 sm:px-10 lg:px-16 pb-12 pt-28 z-[4]">
@@ -75,15 +66,8 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[5]">
         <picture>
           <source srcset="/images/hero-product.webp" type="image/webp" />
-          <img alt="THALASSA LOAM crystal flacon bottle" class="w-full h-full object-cover object-center scale-[1.01]" src="/images/hero-product.png" />
+          <img alt="THALASSA LOAM crystal flacon bottle" class="w-full h-full object-cover object-center" src="/images/hero-product.png" />
         </picture>
-        <div class="absolute inset-0 scale-[1.01]" style="-webkit-mask-image: url('/images/hero-product.webp'); mask-image: url('/images/hero-product.webp'); -webkit-mask-size: cover; mask-size: cover; -webkit-mask-position: center; mask-position: center; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#071D31]/75 via-[#071D31]/20 to-transparent"></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-[#071D31]/50 via-transparent to-[#071D31]/30"></div>
-          <div aria-hidden="true" class="caustic-1 absolute top-1/4 left-1/5 w-72 h-72 rounded-full bg-gradient-to-tr from-[#0EA5E9]/20 via-[#7dd3fc]/15 to-transparent blur-3xl pointer-events-none"></div>
-          <div aria-hidden="true" class="caustic-2 absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gradient-to-bl from-[#38bdf8]/15 via-[#CFE2FE]/10 to-transparent blur-3xl pointer-events-none"></div>
-          <div aria-hidden="true" class="caustic-3 absolute bottom-1/4 left-1/3 w-64 h-64 rounded-full bg-gradient-to-r from-[#0284c7]/20 to-transparent blur-2xl pointer-events-none"></div>
-        </div>
       </div>
 
       <div aria-hidden="true" class="absolute top-0 left-0 right-0 z-[10] w-full px-6 sm:px-10 lg:px-16 pt-8 flex justify-between items-start select-none pointer-events-none">
