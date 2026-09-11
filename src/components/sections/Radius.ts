@@ -18,7 +18,7 @@ export function renderRadius(): string {
         <div class="expand-divider w-full flex items-baseline justify-between mb-20 pb-6 hairline-border-b reveal-item">
           <div class="flex items-baseline gap-6 lg:gap-10">
             <span aria-hidden="true" class="font-display text-5xl lg:text-7xl text-[#071D31] font-semibold leading-none tracking-tight tidal-drift-text">03</span>
-            <h2 class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-bold m-0" id="heading-radius">SILLAGE RADIUS</h2>
+            <h2 class="font-mono text-xs lg:text-sm uppercase tracking-[0.28em] text-[#053C6B] font-bold m-0" id="heading-radius">03 · HOW IT WEARS</h2>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -27,24 +27,24 @@ export function renderRadius(): string {
               ${initial.headline}
             </h3>
             <p class="font-mono text-xs uppercase tracking-widest text-[#1C3B5E] flex items-center gap-2 pt-2 font-semibold">
-              EPIDERMALLY TESTED · DIRECT APPLICATION EXTRAIT DE PARFUM
+              PURE PERFUME OIL GIVES YOU TOTAL CONTROL OVER YOUR SCENT
             </p>
             <div class="pt-4 space-y-4">
               <div class="flex justify-between items-baseline font-mono text-xs text-[#071D31] tracking-wider uppercase font-bold">
-                <label class="text-[#053C6B] cursor-pointer" for="sillage-slider">PROJECTION RADIUS:</label>
+                <label class="text-[#053C6B] cursor-pointer" for="sillage-slider">HOW FAR DO YOU WANT IT TO TRAVEL?</label>
                 <span class="text-sm font-extrabold text-[#071D31]" id="projection-label">${initial.projectionLabel}</span>
               </div>
               <div class="w-full">
-                <input aria-label="Sillage projection radius in meters" aria-valuemax="3.0" aria-valuemin="0.5" aria-valuenow="${initial.radiusMeters}" aria-valuetext="0.5 meters, intimate aura" class="w-full h-1.5 bg-[#b8cfeb] appearance-none cursor-pointer accent-[#053C6B] focus-visible:outline-none" id="sillage-slider" max="3.0" min="0.5" role="slider" step="0.5" type="range" value="${initial.radiusMeters}" />
+                <input aria-label="Scent presence radius in meters" aria-valuemax="3.0" aria-valuemin="0.5" aria-valuenow="${initial.radiusMeters}" aria-valuetext="0.5 meters, close and personal" class="w-full h-1.5 bg-[#b8cfeb] appearance-none cursor-pointer accent-[#053C6B] focus-visible:outline-none" id="sillage-slider" max="3.0" min="0.5" role="slider" step="0.5" type="range" value="${initial.radiusMeters}" />
                 <div aria-hidden="true" class="flex justify-between font-mono text-[9px] text-[#1C3B5E] tracking-widest uppercase mt-2 font-bold">
-                  <span>0.5M INTIMATE</span>
-                  <span>1.5M PROJECTION</span>
+                  <span>0.5M CLOSE</span>
+                  <span>1.5M CONVERSATION</span>
                   <span>3.0M SCENT TRAIL</span>
                 </div>
               </div>
               <div aria-label="Sillage Preset Shortcuts" class="flex flex-wrap gap-2 pt-2" role="group">
-                <button aria-pressed="true" class="radius-btn px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-[#053C6B] bg-[#053C6B] text-[#FAFCFF] font-bold focus-visible:outline-none transition-all shadow-sm cursor-pointer" data-rad="0.5" type="button">0.5M · SKIN AURA</button>
-                <button aria-pressed="false" class="radius-btn px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-[#285384]/25 bg-white/50 backdrop-blur-sm hover:border-[#053C6B] text-[#1C3B5E] font-bold focus-visible:outline-none transition-all cursor-pointer" data-rad="1.5" type="button">1.5M · CONVERSATION</button>
+                <button aria-pressed="true" class="radius-btn px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-[#053C6B] bg-[#053C6B] text-[#FAFCFF] font-bold focus-visible:outline-none transition-all shadow-sm cursor-pointer" data-rad="0.5" type="button">0.5M · CLOSE &amp; PERSONAL</button>
+                <button aria-pressed="false" class="radius-btn px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-[#285384]/25 bg-white/50 backdrop-blur-sm hover:border-[#053C6B] text-[#1C3B5E] font-bold focus-visible:outline-none transition-all cursor-pointer" data-rad="1.5" type="button">1.5M · ARM'S LENGTH</button>
                 <button aria-pressed="false" class="radius-btn px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider border border-[#285384]/25 bg-white/50 backdrop-blur-sm hover:border-[#053C6B] text-[#1C3B5E] font-bold focus-visible:outline-none transition-all cursor-pointer" data-rad="3.0" type="button">3.0M · SCENT TRAIL</button>
               </div>
             </div>
@@ -61,12 +61,12 @@ export function renderRadius(): string {
                   <span class="font-mono text-2xl sm:text-3xl text-[#053C6B] ml-2 font-extrabold">HR</span>
                 </div>
                 <div class="font-mono text-[9px] uppercase tracking-widest text-[#1C3B5E] font-bold mt-2" id="decay-mode-text">
-                  EPIDERMAL PERSISTENCE
+                  STAYS ON SKIN
                 </div>
               </div>
             </div>
             <div class="font-mono text-xs text-[#053C6B] uppercase tracking-wider mt-2 font-bold" id="coverage-sqm">
-              ESTIMATED SILLAGE: ~${initial.estimatedFootprintAreaSqm} M²
+              SCENT REACH: ~${initial.estimatedFootprintAreaSqm} M² AROUND YOU
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ export function setupRadius(): void {
       sillageTitleText.textContent = metrics.headline;
     }
     if (coverageSqm) {
-      coverageSqm.textContent = `ESTIMATED SILLAGE: ~${metrics.estimatedFootprintAreaSqm} M²`;
+      coverageSqm.textContent = `SCENT REACH: ~${metrics.estimatedFootprintAreaSqm} M² AROUND YOU`;
     }
     if (persistenceVal) {
       persistenceVal.textContent = metrics.persistenceHours.toString();
