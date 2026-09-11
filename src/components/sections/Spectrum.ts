@@ -38,12 +38,11 @@ export function renderSpectrum(): string {
         02
       </div>
       <div class="relative z-10 max-w-[1720px] mx-auto">
-        <div class="expand-divider w-full flex flex-col sm:flex-row items-start sm:items-baseline justify-between mb-16 pb-6 hairline-border-b reveal-item">
+        <div class="expand-divider w-full flex items-baseline justify-between mb-16 pb-6 hairline-border-b reveal-item">
           <div class="flex items-baseline gap-6 lg:gap-10">
             <span aria-hidden="true" class="font-display text-5xl lg:text-7xl text-[#071D31] font-semibold leading-none tracking-tight tidal-drift-text">02</span>
-            <h2 class="font-mono text-xs lg:text-sm uppercase text-[#053C6B] font-extrabold telemetry-phased-glow m-0" id="heading-spectrum">[SPECTRUM // KINETIC MATRIX]</h2>
+            <h2 class="font-mono text-xs lg:text-sm uppercase text-[#053C6B] font-bold tracking-[0.28em] m-0" id="heading-spectrum">OLFACTORY SPECTRUM</h2>
           </div>
-          <span class="font-mono text-[10px] text-[#1C3B5E] uppercase tracking-[0.22em] font-bold mt-2 sm:mt-0 scanline-pulse">// INTERACTIVE VOLATILITY &amp; CHROMATOGRAPHY</span>
         </div>
         <div aria-label="Fragrance Volatility Strata Tiers" class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10 pb-4 hairline-border-b reveal-item" role="tablist">
           ${tabButtons}
@@ -51,9 +50,9 @@ export function renderSpectrum(): string {
         <div aria-labelledby="tab-phase-0" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-4 items-start reveal-item" id="spectrum-panel" role="tabpanel">
           <div class="lg:col-span-7 flex flex-col justify-between">
             <div class="flex justify-between items-baseline mb-4 font-mono text-[11px] uppercase tracking-widest text-[#1C3B5E]">
-              <div class="flex items-center gap-2 font-extrabold text-[#053C6B]">
-                <span aria-hidden="true" class="w-2.5 h-2.5 rounded-full bg-[#053C6B] animate-pulse"></span>
-                <span class="scanline-pulse" id="spectrum-phase-header">${initialTier.header}</span>
+              <div class="flex items-center gap-2 font-bold text-[#053C6B]">
+                <span aria-hidden="true" class="w-2 h-2 rounded-full bg-[#053C6B]"></span>
+                <span id="spectrum-phase-header">${initialTier.header}</span>
               </div>
               <span class="font-mono text-[10px] text-[#071D31] font-bold" id="spectrum-dispersion-rate">${initialTier.dispersion}</span>
             </div>
@@ -98,13 +97,13 @@ export function renderSpectrum(): string {
               <div aria-hidden="true" class="absolute bottom-2 right-4 font-mono text-[9px] uppercase tracking-widest text-[#1C3B5E] font-bold">24:00 (EPIDERMAL EQUILIBRIUM)</div>
             </div>
             <div class="mt-4 flex justify-between font-mono text-[10px] text-[#1C3B5E] tracking-widest uppercase font-semibold">
-              <span>KINETIC VOLATILITY COEFFICIENT: <span class="text-[#071D31] font-extrabold" id="volatility-val">${initialTier.volatilityVal}</span></span>
-              <span>CALIBRATION: DIRECT MACERATION</span>
+              <span>VOLATILITY RATE: <span class="text-[#071D31] font-bold" id="volatility-val">${initialTier.volatilityVal}</span></span>
+              <span>DIRECT SOLAR MACERATION</span>
             </div>
           </div>
           <div aria-live="polite" class="lg:col-span-5 space-y-6 lg:hairline-border-l lg:pl-10 font-mono text-xs">
             <div>
-              <span class="text-[#053C6B] font-extrabold tracking-widest uppercase text-[10px] scanline-pulse">// CHROMATOGRAPHY SPECIFICATION</span>
+              <span class="text-[#053C6B] font-bold tracking-widest uppercase text-[10px]">MOLECULAR PROFILE</span>
               <h3 class="font-display text-3xl text-[#071D31] font-semibold mt-1 uppercase tracking-tight header-caustic-shimmer cursor-pointer" data-fluid-shimmer="true" id="chroma-title">${initialTier.chromatographyTitle}</h3>
               <p class="text-[#1C3B5E] tracking-normal font-sans text-sm mt-2 leading-relaxed font-medium" id="chroma-description">
                 ${initialTier.chromatographyDescription}
