@@ -7,7 +7,7 @@
 .font-display {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
-  font-variation-settings: "opsz" 96;
+  font-variation-settings: "opsz" 22;
   font-feature-settings: "kern" 1, "liga" 1;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
