@@ -11,18 +11,18 @@ export function renderFooter(): string {
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-8 pb-14 hairline-border-b">
           <div class="space-y-2">
             <div class="font-brutalist text-2xl font-extrabold tracking-tight text-[#071D31] uppercase hover:text-[#053C6B] transition-colors cursor-default">THALASSA · LOAM</div>
-            <div class="font-mono text-[10px] text-[#053C6B] uppercase tracking-[0.24em] font-semibold">COASTAL BOTANICAL &amp; SALINE EXTRACTION</div>
+            <div class="font-mono text-[10px] text-[#053C6B] uppercase tracking-[0.24em] font-semibold">PURE MEDITERRANEAN COASTAL FRAGRANCE</div>
           </div>
           <div class="font-mono text-[10px] text-[#1C3B5E] uppercase tracking-widest font-semibold">
-            AEGEAN LABS · BASEL · ATHENS
+            ATHENS · CYCLADES · BASEL
           </div>
         </div>
         <div class="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[#1C3B5E] font-mono text-[9px] uppercase tracking-[0.25em] font-semibold">
-          <span>© 2025 LOAM ARCHIVAL MONOGRAPH. ALL RIGHTS RESERVED.</span>
+          <span>© 2025 LOAM. ALL RIGHTS RESERVED.</span>
           <div class="flex items-center gap-8 font-bold">
-            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#origin">ARCHIVE</a>
-            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#spectrum">INDEX</a>
-            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#allocation">TERMS</a>
+            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#origin">STORY</a>
+            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#spectrum">NOTES</a>
+            <a class="footer-link-underline hover:text-[#053C6B] transition-colors focus-visible:outline-none" href="#allocation">ORDER</a>
           </div>
         </div>
       </div>
