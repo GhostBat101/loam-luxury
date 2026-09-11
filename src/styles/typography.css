@@ -62,10 +62,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
-  transition: filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-water-shimmer:hover {
+.hero-water-shimmer:hover,
+.hero-water-shimmer.is-shimmer-hovered {
   filter: drop-shadow(0 8px 24px rgba(14, 165, 233, 0.35));
 }
 
@@ -85,10 +86,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
-  transition: filter 0.3s ease;
+  transition: filter 0.4s ease;
 }
 
-.header-caustic-shimmer:hover {
+.header-caustic-shimmer:hover,
+.header-caustic-shimmer.is-shimmer-hovered {
   filter: drop-shadow(0 4px 12px rgba(14, 165, 233, 0.25));
 }
 
@@ -108,10 +110,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
-  transition: filter 0.3s ease;
+  transition: filter 0.4s ease;
 }
 
-.metallic-liquid-shimmer:hover {
+.metallic-liquid-shimmer:hover,
+.metallic-liquid-shimmer.is-shimmer-hovered {
   filter: drop-shadow(0 6px 18px rgba(14, 165, 233, 0.3));
 }
 
