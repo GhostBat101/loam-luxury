@@ -1,15 +1,16 @@
 {
-  "specimenId": "SPECIMEN 001",
-  "matrixName": "THALASSA MATRIX",
-  "coordinates": "36.8433°N / 25.8916°E",
-  "salinityIndex": "38.5 PSU",
-  "extractionTitle": "AEGEAN SUBSTRATE",
-  "concentration": "ARCHIVAL EXTRACTION 34% CONCENTRÉ",
-  "status": "SPECIMEN READY",
+  "specimenId": "FIRST EDITION",
+  "matrixName": "THALASSA",
+  "coordinates": "CYCLADES, GREECE",
+  "salinityIndex": "34% PURE OIL",
+  "extractionTitle": "AEGEAN COASTAL SCENT",
+  "concentration": "34% EXTRAIT DE PARFUM",
+  "status": "AVAILABLE",
   "provenanceData": [
-    { "label": "SOURCE", "value": "CYCLADES, GREECE" },
-    { "label": "ELEVATION", "value": "0 M (TIDAL LINE)" },
-    { "label": "SALINITY", "value": "38.5 PSU" },
-    { "label": "THERMAL PEAK", "value": "32.4°C NOON FLUX" }
+    { "label": "MADE IN", "value": "CYCLADES, GREECE" },
+    { "label": "THE SCENT", "value": "SEA SALT, DRIFTWOOD & AMBER" },
+    { "label": "CONCENTRATION", "value": "34% EXTRAIT DE PARFUM" },
+    { "label": "WEAR TIME", "value": "UP TO 24 HOURS" }
   ]
 }
+
