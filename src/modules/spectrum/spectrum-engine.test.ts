@@ -28,19 +28,19 @@ describe('spectrum-engine', () => {
     it('returns apex tier for index 0', () => {
       const tier = getTierByIndex(0);
       expect(tier.id).toBe('apex');
-      expect(tier.noteTitle).toBe('SEA SALT & SUNLIT OZONE');
+      expect(tier.noteTitle).toBe('SEA SALT & FRESH AIR');
     });
 
     it('returns median tier for index 1', () => {
       const tier = getTierByIndex(1);
       expect(tier.id).toBe('median');
-      expect(tier.noteTitle).toBe('DRIFTWOOD & BERGAMOT');
+      expect(tier.noteTitle).toBe('SUNLIT CEDAR & BERGAMOT');
     });
 
     it('returns baseline tier for index 2', () => {
       const tier = getTierByIndex(2);
       expect(tier.id).toBe('baseline');
-      expect(tier.noteTitle).toBe('DEEP AMBER & MARINE MINERAL');
+      expect(tier.noteTitle).toBe('WARM AMBER & SEA MINERALS');
     });
 
     it('falls back to index 0 when given out-of-bounds index', () => {
