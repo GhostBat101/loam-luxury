@@ -16,17 +16,17 @@ export function renderHeader(): string {
         </div>
         <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-8 xl:gap-12">
           <a aria-current="page" class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#071D31] font-bold py-1 hover:text-[#053C6B]" href="#origin">ORIGIN</a>
-          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#spectrum">SPECTRUM</a>
-          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#radius">RADIUS</a>
-          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#allocation">ALLOCATION</a>
+          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#spectrum">NOTES</a>
+          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#radius">HOW IT WEARS</a>
+          <a class="nav-magnetic font-mono text-[11px] uppercase tracking-[0.22em] text-[#1C3B5E] font-bold hover:text-[#053C6B] py-1" href="#allocation">ORDER</a>
         </nav>
         <div class="flex items-center gap-4 sm:gap-6">
           <button aria-pressed="false" class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[#071D31] px-3.5 py-1.5 border border-[#285384]/20 hover:border-[#053C6B] bg-white/60 backdrop-blur-sm font-semibold transition-all hover:bg-white/80 focus-visible:outline-none cursor-pointer" id="motion-toggle-btn" title="Toggle animation motion" type="button">
             <span aria-hidden="true" class="inline-block w-2 h-2 rounded-full bg-[#053C6B]" id="motion-dot"></span>
             <span id="motion-btn-text">MOTION: ON</span>
           </button>
-          <button aria-label="Cart with 0 items" class="cart-btn-hover flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#071D31] px-3.5 py-1.5 border border-[#285384]/20 hover:border-[#053C6B] hover:text-[#053C6B] bg-white/60 backdrop-blur-sm font-bold active:scale-95 transition-all cursor-pointer focus-visible:outline-none" id="cart-header-btn" type="button">
-            <span>CART</span>
+          <button aria-label="Shopping bag with 0 items" class="cart-btn-hover flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-[#071D31] px-3.5 py-1.5 border border-[#285384]/20 hover:border-[#053C6B] hover:text-[#053C6B] bg-white/60 backdrop-blur-sm font-bold active:scale-95 transition-all cursor-pointer focus-visible:outline-none" id="cart-header-btn" type="button">
+            <span>BAG</span>
             <span class="font-bold text-[#053C6B]" id="header-cart-count">(0)</span>
           </button>
         </div>
