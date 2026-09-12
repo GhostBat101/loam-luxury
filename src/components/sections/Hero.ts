@@ -10,7 +10,7 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[1]">
         <picture>
           <source srcset="${import.meta.env.BASE_URL}images/hero-bg.webp" type="image/webp" />
-          <img alt="Aegean coastal background view" class="w-full h-full object-cover object-center" src="${import.meta.env.BASE_URL}images/hero-bg.jpg" />
+          <img alt="Aegean coastal background view" class="w-full h-full object-cover object-[75%_50%] sm:object-center" src="${import.meta.env.BASE_URL}images/hero-bg.jpg" />
         </picture>
         <div aria-hidden="true" class="caustic-1 absolute top-1/4 left-1/5 w-72 h-72 rounded-full bg-gradient-to-tr from-[#0EA5E9]/20 via-[#7dd3fc]/15 to-transparent blur-3xl pointer-events-none"></div>
         <div aria-hidden="true" class="caustic-2 absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gradient-to-bl from-[#38bdf8]/15 via-[#CFE2FE]/10 to-transparent blur-3xl pointer-events-none"></div>
@@ -30,7 +30,7 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[3]">
         <picture>
           <source srcset="${import.meta.env.BASE_URL}images/hero-reef.webp" type="image/webp" />
-          <img alt="Aegean coastal reef rocks" class="w-full h-full object-cover object-center" src="${import.meta.env.BASE_URL}images/hero-reef.png" />
+          <img alt="Aegean coastal reef rocks" class="w-full h-full object-cover object-[75%_50%] sm:object-center" src="${import.meta.env.BASE_URL}images/hero-reef.png" />
         </picture>
       </div>
 
@@ -42,11 +42,11 @@ export function renderHero(): string {
           <h1 class="reveal-item relative font-display text-[16vw] lg:text-[15vw] leading-none tracking-tight hero-water-shimmer uppercase font-semibold select-none cursor-pointer" data-fluid-shimmer="true" id="hero-title" style="transition-delay: 200ms;">
             THALASSA
           </h1>
-          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4" style="transition-delay: 350ms;">
+          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4 max-w-[58%] sm:max-w-none" style="transition-delay: 350ms;">
             THE PURE SCENT OF THE AEGEAN SEA.
           </p>
         </div>
-        <div class="reveal-item flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-16 pt-6 border-t border-[#CFE2FE]/25 text-[#CFE2FE] font-mono text-[10px] tracking-widest uppercase font-semibold" style="transition-delay: 450ms;">
+        <div class="reveal-item flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-16 pt-6 border-t border-[#CFE2FE]/25 max-w-[58%] sm:max-w-none text-[#CFE2FE] font-mono text-[10px] tracking-widest uppercase font-semibold" style="transition-delay: 450ms;">
           <span class="text-white/80 font-medium">EXTRAIT DE PARFUM · 100 ML · 34% PURE PERFUME OIL</span>
           <a class="nav-magnetic flex items-center gap-3 text-[#FAFCFF] hover:text-[#38bdf8] transition-all duration-300 pb-1 font-bold group" href="#spectrum">
             <span class="tracking-[0.25em]">EXPLORE THE NOTES</span>
@@ -58,7 +58,7 @@ export function renderHero(): string {
       <div aria-hidden="true" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[5]">
         <picture>
           <source srcset="${import.meta.env.BASE_URL}images/hero-product.webp" type="image/webp" />
-          <img alt="THALASSA LOAM crystal flacon bottle" class="w-full h-full object-cover object-center" src="${import.meta.env.BASE_URL}images/hero-product.png" />
+          <img alt="THALASSA LOAM crystal flacon bottle" class="w-full h-full object-cover object-[75%_50%] sm:object-center" src="${import.meta.env.BASE_URL}images/hero-product.png" />
         </picture>
       </div>
     </section>
