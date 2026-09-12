@@ -42,7 +42,7 @@ export function renderHero(): string {
           <h1 class="reveal-item relative font-display text-[16vw] lg:text-[15vw] leading-none tracking-tight hero-water-shimmer uppercase font-semibold select-none cursor-pointer" data-fluid-shimmer="true" id="hero-title" style="transition-delay: 200ms;">
             THALASSA
           </h1>
-          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4 max-w-[48%] sm:max-w-none relative z-[10] sm:z-auto" style="transition-delay: 350ms;">
+          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4 pl-[2.3vw] lg:pl-[2.1vw] max-w-[48%] sm:max-w-none relative z-[10] sm:z-auto" style="transition-delay: 350ms;">
             THE PURE SCENT OF THE AEGEAN SEA.
           </p>
         </div>
