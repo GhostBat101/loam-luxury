@@ -42,11 +42,11 @@ export function renderHero(): string {
           <h1 class="reveal-item relative font-display text-[16vw] lg:text-[15vw] leading-none tracking-tight hero-water-shimmer uppercase font-semibold select-none cursor-pointer" data-fluid-shimmer="true" id="hero-title" style="transition-delay: 200ms;">
             THALASSA
           </h1>
-          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4 max-w-[58%] sm:max-w-none" style="transition-delay: 350ms;">
+          <p class="reveal-item font-mono text-xs sm:text-sm lg:text-base text-[#CFE2FE] tracking-[0.25em] uppercase font-medium mt-4 max-w-[48%] sm:max-w-none relative z-[10] sm:z-auto" style="transition-delay: 350ms;">
             THE PURE SCENT OF THE AEGEAN SEA.
           </p>
         </div>
-        <div class="reveal-item flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-16 pt-6 border-t border-[#CFE2FE]/25 max-w-[58%] sm:max-w-none text-[#CFE2FE] font-mono text-[10px] tracking-widest uppercase font-semibold" style="transition-delay: 450ms;">
+        <div class="reveal-item flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-16 pt-6 border-t border-[#CFE2FE]/25 max-w-[48%] sm:max-w-none relative z-[10] sm:z-auto text-[#CFE2FE] font-mono text-[10px] tracking-widest uppercase font-semibold" style="transition-delay: 450ms;">
           <span class="text-white/80 font-medium">EXTRAIT DE PARFUM · 100 ML · 34% PURE PERFUME OIL</span>
           <a class="nav-magnetic flex items-center gap-3 text-[#FAFCFF] hover:text-[#38bdf8] transition-all duration-300 pb-1 font-bold group" href="#spectrum">
             <span class="tracking-[0.25em]">EXPLORE THE NOTES</span>
